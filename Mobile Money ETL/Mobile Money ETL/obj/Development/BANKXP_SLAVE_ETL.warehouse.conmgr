@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="BANKXP_SLAVE_ETL.warehouse"
+  DTS:DTSID="{E93D0F1B-E467-4E06-9086-3145E639C79E}"
+  DTS:CreationName="ODBC">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="uid=warehouse;Dsn=BANKXP_SLAVE_ETL;">
+      <DTS:Password
+        DTS:Name="pwd"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAfgJz0wOxcU+zzVhht39OEAAAAAACAAAAAAAQZgAAAAEAACAAAACBwdINJaUUs5KwyT/Fz0OEaDLeJ6VN6y+sKxP7kx9JOAAAAAAOgAAAAAIAACAAAABEmNicNgGtzZiTFu2geYFZGAbMPI3E3m4cX3lLy3DyyoAAAAC2jqWGoFwOMerJcPJ9cdsul6hdhYXVRQiPEAeyamks9BT9kz43IR60UYgjD5VzsY7KDHU+nvQrncgk0rdaWTcExfsbVjqQEXoLw5A7pyaESXTDBFyTRuiBl2kEcT/YuboCgXLcMzMJz+ekOtCMK0QcyWqNe1nsKtyIhW064O+/4UAAAACIOupDJM+w/NMwniFQ7aiX4JYCPQpipEO603dJazkOsOJ4alN4l9RXQgeVH7AokQWOHcx2uavtDEnxBnyw8qaw</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
