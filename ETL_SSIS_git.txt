@@ -1,0 +1,37 @@
+git config --global user.name "Manish"
+git config --global user.email "buddhacharya.manish@gmail.com"
+
+
+https://github.com/buddhacharyamanish/ETL_SSIS.git
+
+
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/buddhacharyamanish/ETL_SSIS.git
+git push -u origin main
+
+
+git remote add origin https://github.com/buddhacharyamanish/ETL_SSIS.git
+git branch -M main
+git push -u origin main
+
+
+
+
+
+################## Second
+
+git config --global user.name "Manish"
+git config --global user.email "buddhacharya.manish@gmail.com"
+git init
+git remote add origin https://github.com/buddhacharyamanish/ETL_SSIS.git -- since this is already added in git skip this and execute following if you need to upload files in this location
+
+git remote set-url origin https://github.com/buddhacharyamanish/ETL_SSIS.git
+
+git add .    # Add all files to Git
+git commit -m "Initial commit"   # Save your work with a message
+git branch -M main    # Rename the default branch to main
+git push -u origin main    # Upload to GitHub
+
