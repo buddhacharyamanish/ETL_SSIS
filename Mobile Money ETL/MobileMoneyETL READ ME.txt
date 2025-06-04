@@ -1,0 +1,18 @@
+Steps:
+1. Executes Stored Procedure inside the Mobile Banking Slave.
+	It pulls all the RAW transaction details into the table inside the Mobile Banking table. This is maintained to be pulled/inserted into 35 server.
+2. Truncates the Mobile Banking transaction table in 35 server.
+3. Pulls data from step 1 into 35 server.
+4. Truncate the CBS data table in 35 server.
+5. Pulls the CBS data into CBS Table in 35 server.
+6. Makes the necessary transformation. 
+	Joins Mobile money and CBS table in 35 table and prepares the final data to be moved to the 204 warehouse.
+	Transformations are made -- includes data parsing from the tran particulars of CBS table. 
+7. Trucates the temp table in 35 server.
+8. Data from Step 6 is prepared and moved into the temp table in 35 server.
+9. Data is pushed to 204 warehouse server from 35 server.
+
+Note:
+1. CBS view is already created.
+2. Stored procedure in Mobile banking Slave DB is already created to select data of yesterday. -- 	2.* This stored procedure pulls the RAW Transaction data from Mobile Banking which is 	then transformed in above ETL process to extract the Outward IBFT transactions.
+	The transformation is made by parsing the Transaction particular.

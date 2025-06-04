@@ -1,0 +1,4 @@
+Steps:
+1. CBS View has been created in CBS DB.
+2. Date is already configured as sysdate - 1 to extract data of yesterday. 
+3. Data is pulled from CBS and Moved into 204 warehouse server.
