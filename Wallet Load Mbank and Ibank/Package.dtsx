@@ -1,0 +1,1985 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="6/8/2025 11:43:37 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="MISSERVER"
+  DTS:CreatorName="MISSERVER\Orange"
+  DTS:DTSID="{2F46A371-DC95-4B4D-BF5D-DC2F5D8DA12A}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5270.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="13"
+  DTS:VersionGUID="{BF458861-71F5-483F-8084-C2596840A2B9}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[10.0.0.204.iReporting.sa]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{1C6E1E99-0F41-400D-8EC7-EE0A8F9C769E}"
+      DTS:ObjectName="10.0.0.204.iReporting.sa">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=10.0.0.204;User ID=sa;Initial Catalog=iReporting;Provider=SQLNCLI11.1;Persist Security Info=True;Application Name=SSIS-Package-{1C6E1E99-0F41-400D-8EC7-EE0A8F9C769E}10.0.0.204.iReporting.sa;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAfgJz0wOxcU+zzVhht39OEAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADJWapy4cMZaz4XFwt8UWIlXrQDaA6o8fiuh+86SwB5MAAAAAAOgAAAAAIAACAAAACRBPeX6Ge4sQ5gVJY+4a10L82pt/374BUO5QooMmCBNyAAAACN4HaJ386n4PGPCdlEAOZ/Vl7N0Z5DXVox0MIltDaVhUAAAAAc2u+IGhGHiNAg7TKEQ4+tL+YukVWLEyPw/8azaI/oTAtlCTbyd2TAaRHAUnukgSUm9We3jzlACWRwvGgECXgm</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[192.168.32.20:1521/FINPROD.test]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{4E2047FE-FA80-4E10-83F0-2390C1AB3569}"
+      DTS:ObjectName="192.168.32.20:1521/FINPROD.test">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=192.168.32.20:1521/FINPROD;User ID=test;Provider=OraOLEDB.Oracle.1;Persist Security Info=True;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAfgJz0wOxcU+zzVhht39OEAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABHNVwhJBgSi6RWNJgifdgt+Bn2EoUkMcjmlx0wYeuVJgAAAAAOgAAAAAIAACAAAAD6GuwvVyYdMXOw9ZOhyGUKhR0tLIjb7CqDsaja6VxheSAAAAA7ieOJr8zWypoLrnbeAsYmut0Ggbk6jLvpzGpH/4oe1kAAAACTx4Fk4rwreTQtfFUsN09OmZzirpB7wGhhH2V19DGQyJbN86q3EhLBdqfRm1WV6p7upquJQlMO7LieCVmBrDf7</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[BANKXP_SLAVE_ETL.warehouse]"
+      DTS:CreationName="ODBC"
+      DTS:DTSID="{3FAF6518-B224-40E3-9975-E71BB40B7EEE}"
+      DTS:ObjectName="BANKXP_SLAVE_ETL.warehouse">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="uid=warehouse;Dsn=BANKXP_SLAVE_ETL;">
+          <DTS:Password
+            DTS:Name="pwd"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAfgJz0wOxcU+zzVhht39OEAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADqaUSlhGDIuuVB0H5knvM/CB9ftvr6X4ErW14t8CacnwAAAAAOgAAAAAIAACAAAAAVenel3dTH3UFT9jn1VRvaHB0F/YUoma3pf++2kuz6AiAAAAAg0dkdTf2PUBaEDJ93JSD5Svn8HKvH8RPhsKnf5LSDX0AAAACXzulACXZXWnQTiTAVPuZBLWx4vphpwQcSpdLruL6EByFg375QkIeosw4/hpXBzSRRGPsUnAnvk8/Lv+OCjvrP</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[BANKXP_SLAVE_ETL.warehouse 1]"
+      DTS:CreationName="ODBC"
+      DTS:DTSID="{249E7F0E-DBA8-486A-9E74-42DEB3AE317E}"
+      DTS:ObjectName="BANKXP_SLAVE_ETL.warehouse 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="uid=warehouse;Dsn=BANKXP_SLAVE_ETL;">
+          <DTS:Password
+            DTS:Name="pwd"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAfgJz0wOxcU+zzVhht39OEAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD5auoC3UnlANh2hu27n0YbSIVaUk6MSp0FVrf3eOOlQwAAAAAOgAAAAAIAACAAAADJEm/oJ3V8jys9o37TeF/EKFVxrEJOePrXZajV1AzFwiAAAAB2PJMO6w2N7CO15g/VQQJmWO9NAZuldGof0+e2DKOHmEAAAACdHIt8jgsPduqrXqLEYi6pw83NwCYEu8XwImIACS9vhkXNfwW91c6GEcE9LUNsSgJJbQcwMrsbhWsU/hjnvz8R</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[IBANK.bankex]"
+      DTS:CreationName="ODBC"
+      DTS:DTSID="{711EBE99-D080-4290-B043-00652956A477}"
+      DTS:ObjectName="IBANK.bankex">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="uid=bankex;Dsn=IBANK;">
+          <DTS:Password
+            DTS:Name="pwd"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAfgJz0wOxcU+zzVhht39OEAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACZn+RErPxLJqriffd1VMWtTGOLCi/bXZzCGfylw3MP5AAAAAAOgAAAAAIAACAAAADsedvE81tyhG8sBPvlKQP0PWuGe3F4v0Iq/mdy2EtDHiAAAADtyQvHVoeZaPpDZUgvce8BxkuZeO54WF+5uvP119mqMUAAAACVGhlctWMUFttFyhFPsULKPvK2PRa/K/ecxZ3Szy69VG85gA7+UxBxT8xypnSgZXbmCzy2ohNBDKBm0DYM7YoL</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost.iReporting]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{627E0EF8-AC82-4B7D-87A2-E6FBD1473743}"
+      DTS:ObjectName="localhost.iReporting">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=iReporting;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package-{627E0EF8-AC82-4B7D-87A2-E6FBD1473743}localhost.iReporting;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost.iReporting 1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{99B7D43B-8CE7-498B-B1AE-4E5555BF6864}"
+      DTS:ObjectName="localhost.iReporting 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=iReporting;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package-{99B7D43B-8CE7-498B-B1AE-4E5555BF6864}localhost.iReporting;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Clean data to be inserted in 204"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{672AF6FA-526C-423B-87BA-D47ACEC20C88}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Clean data to be inserted in 204"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{627E0EF8-AC82-4B7D-87A2-E6FBD1473743}"
+          SQLTask:SqlStatementSource="DELETE FROM IBANK_ESEWA_LOAD WHERE CAST(PSTD_DATE AS DATE) != CAST(GETDATE()-1 AS DATE) " xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Clean Old data from TEMP Table in 35"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{B27CA3CA-37C8-475E-83C7-415AF684E8DB}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Clean Old data from TEMP Table in 35"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{627E0EF8-AC82-4B7D-87A2-E6FBD1473743}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE IBANK_ESEWA_LOAD" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Insert into 204 Server"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{0033C70B-4D74-4E93-BEBE-E0305DD14920}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Insert into 204 Server"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Insert into 204 Server\204 Server"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="204 Server"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[IBANK_ESEWA_LOAD]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Insert into 204 Server\204 Server.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[10.0.0.204.iReporting.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[10.0.0.204.iReporting.sa]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Insert into 204 Server\204 Server.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Insert into 204 Server\204 Server.Inputs[OLE DB Destination Input].Columns[ACCT_NAME]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="250"
+                      cachedName="ACCT_NAME"
+                      externalMetadataColumnId="Package\Insert into 204 Server\204 Server.Inputs[OLE DB Destination Input].ExternalColumns[ACCT_NAME]"
+                      lineageId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Output].Columns[ACCT_NAME]" />
+                    <inputColumn
+                      refId="Package\Insert into 204 Server\204 Server.Inputs[OLE DB Destination Input].Columns[FORACID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="25"
+                      cachedName="FORACID"
+                      externalMetadataColumnId="Package\Insert into 204 Server\204 Server.Inputs[OLE DB Destination Input].ExternalColumns[FORACID]"
+                      lineageId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Output].Columns[FORACID]" />
+                    <inputColumn
+                      refId="Package\Insert into 204 Server\204 Server.Inputs[OLE DB Destination Input].Columns[TRAN_DATE]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="TRAN_DATE"
+                      externalMetadataColumnId="Package\Insert into 204 Server\204 Server.Inputs[OLE DB Destination Input].ExternalColumns[TRAN_DATE]"
+                      lineageId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Output].Columns[TRAN_DATE]" />
+                    <inputColumn
+                      refId="Package\Insert into 204 Server\204 Server.Inputs[OLE DB Destination Input].Columns[VALUE_DATE]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="VALUE_DATE"
+                      externalMetadataColumnId="Package\Insert into 204 Server\204 Server.Inputs[OLE DB Destination Input].ExternalColumns[VALUE_DATE]"
+                      lineageId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Output].Columns[VALUE_DATE]" />
+                    <inputColumn
+                      refId="Package\Insert into 204 Server\204 Server.Inputs[OLE DB Destination Input].Columns[PSTD_DATE]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="PSTD_DATE"
+                      externalMetadataColumnId="Package\Insert into 204 Server\204 Server.Inputs[OLE DB Destination Input].ExternalColumns[PSTD_DATE]"
+                      lineageId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Output].Columns[PSTD_DATE]" />
+                    <inputColumn
+                      refId="Package\Insert into 204 Server\204 Server.Inputs[OLE DB Destination Input].Columns[RCRE_TIME]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="RCRE_TIME"
+                      externalMetadataColumnId="Package\Insert into 204 Server\204 Server.Inputs[OLE DB Destination Input].ExternalColumns[RCRE_TIME]"
+                      lineageId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Output].Columns[RCRE_TIME]" />
+                    <inputColumn
+                      refId="Package\Insert into 204 Server\204 Server.Inputs[OLE DB Destination Input].Columns[TRAN_ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="15"
+                      cachedName="TRAN_ID"
+                      externalMetadataColumnId="Package\Insert into 204 Server\204 Server.Inputs[OLE DB Destination Input].ExternalColumns[TRAN_ID]"
+                      lineageId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Output].Columns[TRAN_ID]" />
+                    <inputColumn
+                      refId="Package\Insert into 204 Server\204 Server.Inputs[OLE DB Destination Input].Columns[TRAN_PARTICULAR]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="TRAN_PARTICULAR"
+                      externalMetadataColumnId="Package\Insert into 204 Server\204 Server.Inputs[OLE DB Destination Input].ExternalColumns[TRAN_PARTICULAR]"
+                      lineageId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Output].Columns[TRAN_PARTICULAR]" />
+                    <inputColumn
+                      refId="Package\Insert into 204 Server\204 Server.Inputs[OLE DB Destination Input].Columns[TRAN_PARTICULAR_2]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="TRAN_PARTICULAR_2"
+                      externalMetadataColumnId="Package\Insert into 204 Server\204 Server.Inputs[OLE DB Destination Input].ExternalColumns[TRAN_PARTICULAR_2]"
+                      lineageId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Output].Columns[TRAN_PARTICULAR_2]" />
+                    <inputColumn
+                      refId="Package\Insert into 204 Server\204 Server.Inputs[OLE DB Destination Input].Columns[TRAN_AMT]"
+                      cachedDataType="cy"
+                      cachedName="TRAN_AMT"
+                      externalMetadataColumnId="Package\Insert into 204 Server\204 Server.Inputs[OLE DB Destination Input].ExternalColumns[TRAN_AMT]"
+                      lineageId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Output].Columns[TRAN_AMT]" />
+                    <inputColumn
+                      refId="Package\Insert into 204 Server\204 Server.Inputs[OLE DB Destination Input].Columns[ESEWA_ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ESEWA_ID"
+                      externalMetadataColumnId="Package\Insert into 204 Server\204 Server.Inputs[OLE DB Destination Input].ExternalColumns[ESEWA_ID]"
+                      lineageId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Output].Columns[ESEWA_ID]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Insert into 204 Server\204 Server.Inputs[OLE DB Destination Input].ExternalColumns[ACCT_NAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="250"
+                      name="ACCT_NAME" />
+                    <externalMetadataColumn
+                      refId="Package\Insert into 204 Server\204 Server.Inputs[OLE DB Destination Input].ExternalColumns[FORACID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="25"
+                      name="FORACID" />
+                    <externalMetadataColumn
+                      refId="Package\Insert into 204 Server\204 Server.Inputs[OLE DB Destination Input].ExternalColumns[TRAN_DATE]"
+                      dataType="dbTimeStamp"
+                      name="TRAN_DATE" />
+                    <externalMetadataColumn
+                      refId="Package\Insert into 204 Server\204 Server.Inputs[OLE DB Destination Input].ExternalColumns[VALUE_DATE]"
+                      dataType="dbTimeStamp"
+                      name="VALUE_DATE" />
+                    <externalMetadataColumn
+                      refId="Package\Insert into 204 Server\204 Server.Inputs[OLE DB Destination Input].ExternalColumns[PSTD_DATE]"
+                      dataType="dbTimeStamp"
+                      name="PSTD_DATE" />
+                    <externalMetadataColumn
+                      refId="Package\Insert into 204 Server\204 Server.Inputs[OLE DB Destination Input].ExternalColumns[RCRE_TIME]"
+                      dataType="dbTimeStamp"
+                      name="RCRE_TIME" />
+                    <externalMetadataColumn
+                      refId="Package\Insert into 204 Server\204 Server.Inputs[OLE DB Destination Input].ExternalColumns[TRAN_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="TRAN_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Insert into 204 Server\204 Server.Inputs[OLE DB Destination Input].ExternalColumns[TRAN_PARTICULAR]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="TRAN_PARTICULAR" />
+                    <externalMetadataColumn
+                      refId="Package\Insert into 204 Server\204 Server.Inputs[OLE DB Destination Input].ExternalColumns[TRAN_PARTICULAR_2]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="TRAN_PARTICULAR_2" />
+                    <externalMetadataColumn
+                      refId="Package\Insert into 204 Server\204 Server.Inputs[OLE DB Destination Input].ExternalColumns[TRAN_AMT]"
+                      dataType="cy"
+                      name="TRAN_AMT" />
+                    <externalMetadataColumn
+                      refId="Package\Insert into 204 Server\204 Server.Inputs[OLE DB Destination Input].ExternalColumns[ESEWA_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ESEWA_ID" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Insert into 204 Server\204 Server.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Insert into 204 Server\204 Server.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Insert into 204 Server\204 Server.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Insert into 204 Server\204 Server.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Insert into 204 Server\204 Server.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Insert into 204 Server\204 Server.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Insert into 204 Server\35 Server"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="35 Server"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[IBANK_ESEWA_LOAD]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Insert into 204 Server\35 Server.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.iReporting]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.iReporting]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Output].Columns[ACCT_NAME]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Output].ExternalColumns[ACCT_NAME]"
+                      length="250"
+                      lineageId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Output].Columns[ACCT_NAME]"
+                      name="ACCT_NAME"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Output].Columns[FORACID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Output].ExternalColumns[FORACID]"
+                      length="25"
+                      lineageId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Output].Columns[FORACID]"
+                      name="FORACID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Output].Columns[TRAN_DATE]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Output].ExternalColumns[TRAN_DATE]"
+                      lineageId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Output].Columns[TRAN_DATE]"
+                      name="TRAN_DATE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Output].Columns[VALUE_DATE]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Output].ExternalColumns[VALUE_DATE]"
+                      lineageId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Output].Columns[VALUE_DATE]"
+                      name="VALUE_DATE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Output].Columns[PSTD_DATE]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Output].ExternalColumns[PSTD_DATE]"
+                      lineageId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Output].Columns[PSTD_DATE]"
+                      name="PSTD_DATE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Output].Columns[RCRE_TIME]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Output].ExternalColumns[RCRE_TIME]"
+                      lineageId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Output].Columns[RCRE_TIME]"
+                      name="RCRE_TIME"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Output].Columns[TRAN_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Output].ExternalColumns[TRAN_ID]"
+                      length="15"
+                      lineageId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Output].Columns[TRAN_ID]"
+                      name="TRAN_ID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Output].Columns[TRAN_PARTICULAR]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Output].ExternalColumns[TRAN_PARTICULAR]"
+                      length="100"
+                      lineageId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Output].Columns[TRAN_PARTICULAR]"
+                      name="TRAN_PARTICULAR"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Output].Columns[TRAN_PARTICULAR_2]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Output].ExternalColumns[TRAN_PARTICULAR_2]"
+                      length="100"
+                      lineageId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Output].Columns[TRAN_PARTICULAR_2]"
+                      name="TRAN_PARTICULAR_2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Output].Columns[TRAN_AMT]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Output].ExternalColumns[TRAN_AMT]"
+                      lineageId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Output].Columns[TRAN_AMT]"
+                      name="TRAN_AMT"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Output].Columns[ESEWA_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Output].ExternalColumns[ESEWA_ID]"
+                      length="50"
+                      lineageId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Output].Columns[ESEWA_ID]"
+                      name="ESEWA_ID"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Output].ExternalColumns[ACCT_NAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="250"
+                      name="ACCT_NAME" />
+                    <externalMetadataColumn
+                      refId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Output].ExternalColumns[FORACID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="25"
+                      name="FORACID" />
+                    <externalMetadataColumn
+                      refId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Output].ExternalColumns[TRAN_DATE]"
+                      dataType="dbTimeStamp"
+                      name="TRAN_DATE" />
+                    <externalMetadataColumn
+                      refId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Output].ExternalColumns[VALUE_DATE]"
+                      dataType="dbTimeStamp"
+                      name="VALUE_DATE" />
+                    <externalMetadataColumn
+                      refId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Output].ExternalColumns[PSTD_DATE]"
+                      dataType="dbTimeStamp"
+                      name="PSTD_DATE" />
+                    <externalMetadataColumn
+                      refId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Output].ExternalColumns[RCRE_TIME]"
+                      dataType="dbTimeStamp"
+                      name="RCRE_TIME" />
+                    <externalMetadataColumn
+                      refId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Output].ExternalColumns[TRAN_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="TRAN_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Output].ExternalColumns[TRAN_PARTICULAR]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="TRAN_PARTICULAR" />
+                    <externalMetadataColumn
+                      refId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Output].ExternalColumns[TRAN_PARTICULAR_2]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="TRAN_PARTICULAR_2" />
+                    <externalMetadataColumn
+                      refId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Output].ExternalColumns[TRAN_AMT]"
+                      dataType="cy"
+                      name="TRAN_AMT" />
+                    <externalMetadataColumn
+                      refId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Output].ExternalColumns[ESEWA_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ESEWA_ID" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Error Output].Columns[ACCT_NAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="250"
+                      lineageId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Error Output].Columns[ACCT_NAME]"
+                      name="ACCT_NAME" />
+                    <outputColumn
+                      refId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Error Output].Columns[FORACID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="25"
+                      lineageId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Error Output].Columns[FORACID]"
+                      name="FORACID" />
+                    <outputColumn
+                      refId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Error Output].Columns[TRAN_DATE]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Error Output].Columns[TRAN_DATE]"
+                      name="TRAN_DATE" />
+                    <outputColumn
+                      refId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Error Output].Columns[VALUE_DATE]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Error Output].Columns[VALUE_DATE]"
+                      name="VALUE_DATE" />
+                    <outputColumn
+                      refId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Error Output].Columns[PSTD_DATE]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Error Output].Columns[PSTD_DATE]"
+                      name="PSTD_DATE" />
+                    <outputColumn
+                      refId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Error Output].Columns[RCRE_TIME]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Error Output].Columns[RCRE_TIME]"
+                      name="RCRE_TIME" />
+                    <outputColumn
+                      refId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Error Output].Columns[TRAN_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      lineageId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Error Output].Columns[TRAN_ID]"
+                      name="TRAN_ID" />
+                    <outputColumn
+                      refId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Error Output].Columns[TRAN_PARTICULAR]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      lineageId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Error Output].Columns[TRAN_PARTICULAR]"
+                      name="TRAN_PARTICULAR" />
+                    <outputColumn
+                      refId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Error Output].Columns[TRAN_PARTICULAR_2]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      lineageId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Error Output].Columns[TRAN_PARTICULAR_2]"
+                      name="TRAN_PARTICULAR_2" />
+                    <outputColumn
+                      refId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Error Output].Columns[TRAN_AMT]"
+                      dataType="cy"
+                      lineageId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Error Output].Columns[TRAN_AMT]"
+                      name="TRAN_AMT" />
+                    <outputColumn
+                      refId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Error Output].Columns[ESEWA_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Error Output].Columns[ESEWA_ID]"
+                      name="ESEWA_ID" />
+                    <outputColumn
+                      refId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Insert into 204 Server.Paths[OLE DB Source Output]"
+              endId="Package\Insert into 204 Server\204 Server.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Insert into 204 Server\35 Server.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Wallet Load from Internet Banking"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{E3BBB011-2AD6-462E-AADD-23D5BFF3C10A}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Wallet Load from Internet Banking"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Wallet Load from Internet Banking\35 Sever"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="35 Sever"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[IBANK_ESEWA_LOAD]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Wallet Load from Internet Banking\35 Sever.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.iReporting]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.iReporting]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Wallet Load from Internet Banking\35 Sever.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Wallet Load from Internet Banking\35 Sever.Inputs[OLE DB Destination Input].Columns[TRAN_DATE]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="TRAN_DATE"
+                      externalMetadataColumnId="Package\Wallet Load from Internet Banking\35 Sever.Inputs[OLE DB Destination Input].ExternalColumns[TRAN_DATE]"
+                      lineageId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Output].Columns[TRAN_DATE]" />
+                    <inputColumn
+                      refId="Package\Wallet Load from Internet Banking\35 Sever.Inputs[OLE DB Destination Input].Columns[VALUE_DATE]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="VALUE_DATE"
+                      externalMetadataColumnId="Package\Wallet Load from Internet Banking\35 Sever.Inputs[OLE DB Destination Input].ExternalColumns[VALUE_DATE]"
+                      lineageId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Output].Columns[VALUE_DATE]" />
+                    <inputColumn
+                      refId="Package\Wallet Load from Internet Banking\35 Sever.Inputs[OLE DB Destination Input].Columns[PSTD_DATE]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="PSTD_DATE"
+                      externalMetadataColumnId="Package\Wallet Load from Internet Banking\35 Sever.Inputs[OLE DB Destination Input].ExternalColumns[PSTD_DATE]"
+                      lineageId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Output].Columns[PSTD_DATE]" />
+                    <inputColumn
+                      refId="Package\Wallet Load from Internet Banking\35 Sever.Inputs[OLE DB Destination Input].Columns[RCRE_TIME]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="RCRE_TIME"
+                      externalMetadataColumnId="Package\Wallet Load from Internet Banking\35 Sever.Inputs[OLE DB Destination Input].ExternalColumns[RCRE_TIME]"
+                      lineageId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Output].Columns[RCRE_TIME]" />
+                    <inputColumn
+                      refId="Package\Wallet Load from Internet Banking\35 Sever.Inputs[OLE DB Destination Input].Columns[ACCT_NAME]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="250"
+                      cachedName="ACCT_NAME"
+                      externalMetadataColumnId="Package\Wallet Load from Internet Banking\35 Sever.Inputs[OLE DB Destination Input].ExternalColumns[ACCT_NAME]"
+                      lineageId="Package\Wallet Load from Internet Banking\Data Conversion.Outputs[Data Conversion Output].Columns[ACCT_NAME]" />
+                    <inputColumn
+                      refId="Package\Wallet Load from Internet Banking\35 Sever.Inputs[OLE DB Destination Input].Columns[FORACID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="16"
+                      cachedName="FORACID"
+                      externalMetadataColumnId="Package\Wallet Load from Internet Banking\35 Sever.Inputs[OLE DB Destination Input].ExternalColumns[FORACID]"
+                      lineageId="Package\Wallet Load from Internet Banking\Data Conversion.Outputs[Data Conversion Output].Columns[FORACID]" />
+                    <inputColumn
+                      refId="Package\Wallet Load from Internet Banking\35 Sever.Inputs[OLE DB Destination Input].Columns[TRAN_ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="9"
+                      cachedName="TRAN_ID"
+                      externalMetadataColumnId="Package\Wallet Load from Internet Banking\35 Sever.Inputs[OLE DB Destination Input].ExternalColumns[TRAN_ID]"
+                      lineageId="Package\Wallet Load from Internet Banking\Data Conversion.Outputs[Data Conversion Output].Columns[TRAN_ID]" />
+                    <inputColumn
+                      refId="Package\Wallet Load from Internet Banking\35 Sever.Inputs[OLE DB Destination Input].Columns[TRAN_PARTICULAR]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="TRAN_PARTICULAR"
+                      externalMetadataColumnId="Package\Wallet Load from Internet Banking\35 Sever.Inputs[OLE DB Destination Input].ExternalColumns[TRAN_PARTICULAR]"
+                      lineageId="Package\Wallet Load from Internet Banking\Data Conversion.Outputs[Data Conversion Output].Columns[TRAN_PARTICULAR]" />
+                    <inputColumn
+                      refId="Package\Wallet Load from Internet Banking\35 Sever.Inputs[OLE DB Destination Input].Columns[TRAN_PARTICULAR_2]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="TRAN_PARTICULAR_2"
+                      externalMetadataColumnId="Package\Wallet Load from Internet Banking\35 Sever.Inputs[OLE DB Destination Input].ExternalColumns[TRAN_PARTICULAR_2]"
+                      lineageId="Package\Wallet Load from Internet Banking\Data Conversion.Outputs[Data Conversion Output].Columns[TRAN_PARTICULAR_2]" />
+                    <inputColumn
+                      refId="Package\Wallet Load from Internet Banking\35 Sever.Inputs[OLE DB Destination Input].Columns[TRAN_AMT]"
+                      cachedDataType="numeric"
+                      cachedName="TRAN_AMT"
+                      cachedPrecision="20"
+                      cachedScale="4"
+                      externalMetadataColumnId="Package\Wallet Load from Internet Banking\35 Sever.Inputs[OLE DB Destination Input].ExternalColumns[TRAN_AMT]"
+                      lineageId="Package\Wallet Load from Internet Banking\Data Conversion.Outputs[Data Conversion Output].Columns[TRAN_AMT]" />
+                    <inputColumn
+                      refId="Package\Wallet Load from Internet Banking\35 Sever.Inputs[OLE DB Destination Input].Columns[ESEWA_ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ESEWA_ID"
+                      externalMetadataColumnId="Package\Wallet Load from Internet Banking\35 Sever.Inputs[OLE DB Destination Input].ExternalColumns[ESEWA_ID]"
+                      lineageId="Package\Wallet Load from Internet Banking\Data Conversion.Outputs[Data Conversion Output].Columns[ESEWA_ID]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Wallet Load from Internet Banking\35 Sever.Inputs[OLE DB Destination Input].ExternalColumns[ACCT_NAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="250"
+                      name="ACCT_NAME" />
+                    <externalMetadataColumn
+                      refId="Package\Wallet Load from Internet Banking\35 Sever.Inputs[OLE DB Destination Input].ExternalColumns[FORACID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="25"
+                      name="FORACID" />
+                    <externalMetadataColumn
+                      refId="Package\Wallet Load from Internet Banking\35 Sever.Inputs[OLE DB Destination Input].ExternalColumns[TRAN_DATE]"
+                      dataType="dbTimeStamp"
+                      name="TRAN_DATE" />
+                    <externalMetadataColumn
+                      refId="Package\Wallet Load from Internet Banking\35 Sever.Inputs[OLE DB Destination Input].ExternalColumns[VALUE_DATE]"
+                      dataType="dbTimeStamp"
+                      name="VALUE_DATE" />
+                    <externalMetadataColumn
+                      refId="Package\Wallet Load from Internet Banking\35 Sever.Inputs[OLE DB Destination Input].ExternalColumns[PSTD_DATE]"
+                      dataType="dbTimeStamp"
+                      name="PSTD_DATE" />
+                    <externalMetadataColumn
+                      refId="Package\Wallet Load from Internet Banking\35 Sever.Inputs[OLE DB Destination Input].ExternalColumns[RCRE_TIME]"
+                      dataType="dbTimeStamp"
+                      name="RCRE_TIME" />
+                    <externalMetadataColumn
+                      refId="Package\Wallet Load from Internet Banking\35 Sever.Inputs[OLE DB Destination Input].ExternalColumns[TRAN_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="TRAN_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Wallet Load from Internet Banking\35 Sever.Inputs[OLE DB Destination Input].ExternalColumns[TRAN_PARTICULAR]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="TRAN_PARTICULAR" />
+                    <externalMetadataColumn
+                      refId="Package\Wallet Load from Internet Banking\35 Sever.Inputs[OLE DB Destination Input].ExternalColumns[TRAN_PARTICULAR_2]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="TRAN_PARTICULAR_2" />
+                    <externalMetadataColumn
+                      refId="Package\Wallet Load from Internet Banking\35 Sever.Inputs[OLE DB Destination Input].ExternalColumns[TRAN_AMT]"
+                      dataType="cy"
+                      name="TRAN_AMT" />
+                    <externalMetadataColumn
+                      refId="Package\Wallet Load from Internet Banking\35 Sever.Inputs[OLE DB Destination Input].ExternalColumns[ESEWA_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ESEWA_ID" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Wallet Load from Internet Banking\35 Sever.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Wallet Load from Internet Banking\35 Sever.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Wallet Load from Internet Banking\35 Sever.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Wallet Load from Internet Banking\35 Sever.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Wallet Load from Internet Banking\35 Sever.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Wallet Load from Internet Banking\35 Sever.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Wallet Load from Internet Banking\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Wallet Load from Internet Banking\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Wallet Load from Internet Banking\Data Conversion.Inputs[Data Conversion Input].Columns[ACCT_NAME]"
+                      cachedDataType="wstr"
+                      cachedLength="80"
+                      cachedName="ACCT_NAME"
+                      lineageId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Output].Columns[ACCT_NAME]" />
+                    <inputColumn
+                      refId="Package\Wallet Load from Internet Banking\Data Conversion.Inputs[Data Conversion Input].Columns[FORACID]"
+                      cachedDataType="wstr"
+                      cachedLength="16"
+                      cachedName="FORACID"
+                      lineageId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Output].Columns[FORACID]" />
+                    <inputColumn
+                      refId="Package\Wallet Load from Internet Banking\Data Conversion.Inputs[Data Conversion Input].Columns[TRAN_ID]"
+                      cachedDataType="wstr"
+                      cachedLength="9"
+                      cachedName="TRAN_ID"
+                      lineageId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Output].Columns[TRAN_ID]" />
+                    <inputColumn
+                      refId="Package\Wallet Load from Internet Banking\Data Conversion.Inputs[Data Conversion Input].Columns[TRAN_PARTICULAR]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="TRAN_PARTICULAR"
+                      lineageId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Output].Columns[TRAN_PARTICULAR]" />
+                    <inputColumn
+                      refId="Package\Wallet Load from Internet Banking\Data Conversion.Inputs[Data Conversion Input].Columns[TRAN_PARTICULAR_2]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="TRAN_PARTICULAR_2"
+                      lineageId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Output].Columns[TRAN_PARTICULAR_2]" />
+                    <inputColumn
+                      refId="Package\Wallet Load from Internet Banking\Data Conversion.Inputs[Data Conversion Input].Columns[TRAN_AMT]"
+                      cachedDataType="numeric"
+                      cachedName="TRAN_AMT"
+                      cachedPrecision="20"
+                      cachedScale="4"
+                      lineageId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Output].Columns[TRAN_AMT]" />
+                    <inputColumn
+                      refId="Package\Wallet Load from Internet Banking\Data Conversion.Inputs[Data Conversion Input].Columns[ESEWA_ID]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="ESEWA_ID"
+                      lineageId="Package\Wallet Load from Internet Banking\Derived Column.Outputs[Derived Column Output].Columns[ESEWA_ID]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Wallet Load from Internet Banking\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Wallet Load from Internet Banking\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Wallet Load from Internet Banking\Data Conversion.Outputs[Data Conversion Output].Columns[ACCT_NAME]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="250"
+                      lineageId="Package\Wallet Load from Internet Banking\Data Conversion.Outputs[Data Conversion Output].Columns[ACCT_NAME]"
+                      name="ACCT_NAME"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Output].Columns[ACCT_NAME]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Wallet Load from Internet Banking\Data Conversion.Outputs[Data Conversion Output].Columns[FORACID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="16"
+                      lineageId="Package\Wallet Load from Internet Banking\Data Conversion.Outputs[Data Conversion Output].Columns[FORACID]"
+                      name="FORACID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Output].Columns[FORACID]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Wallet Load from Internet Banking\Data Conversion.Outputs[Data Conversion Output].Columns[TRAN_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="9"
+                      lineageId="Package\Wallet Load from Internet Banking\Data Conversion.Outputs[Data Conversion Output].Columns[TRAN_ID]"
+                      name="TRAN_ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Output].Columns[TRAN_ID]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Wallet Load from Internet Banking\Data Conversion.Outputs[Data Conversion Output].Columns[TRAN_PARTICULAR]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Wallet Load from Internet Banking\Data Conversion.Outputs[Data Conversion Output].Columns[TRAN_PARTICULAR]"
+                      name="TRAN_PARTICULAR"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Output].Columns[TRAN_PARTICULAR]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Wallet Load from Internet Banking\Data Conversion.Outputs[Data Conversion Output].Columns[TRAN_PARTICULAR_2]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Wallet Load from Internet Banking\Data Conversion.Outputs[Data Conversion Output].Columns[TRAN_PARTICULAR_2]"
+                      name="TRAN_PARTICULAR_2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Output].Columns[TRAN_PARTICULAR_2]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Wallet Load from Internet Banking\Data Conversion.Outputs[Data Conversion Output].Columns[TRAN_AMT]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Wallet Load from Internet Banking\Data Conversion.Outputs[Data Conversion Output].Columns[TRAN_AMT]"
+                      name="TRAN_AMT"
+                      precision="20"
+                      scale="4"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Output].Columns[TRAN_AMT]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Wallet Load from Internet Banking\Data Conversion.Outputs[Data Conversion Output].Columns[ESEWA_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Wallet Load from Internet Banking\Data Conversion.Outputs[Data Conversion Output].Columns[ESEWA_ID]"
+                      name="ESEWA_ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Wallet Load from Internet Banking\Derived Column.Outputs[Derived Column Output].Columns[ESEWA_ID]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Wallet Load from Internet Banking\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Wallet Load from Internet Banking\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Wallet Load from Internet Banking\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Wallet Load from Internet Banking\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Wallet Load from Internet Banking\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Wallet Load from Internet Banking\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Wallet Load from Internet Banking\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Wallet Load from Internet Banking\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Wallet Load from Internet Banking\Derived Column.Inputs[Derived Column Input].Columns[TRAN_PARTICULAR]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="TRAN_PARTICULAR"
+                      lineageId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Output].Columns[TRAN_PARTICULAR]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Wallet Load from Internet Banking\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Wallet Load from Internet Banking\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Wallet Load from Internet Banking\Derived Column.Outputs[Derived Column Output].Columns[ESEWA_ID]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Wallet Load from Internet Banking\Derived Column.Outputs[Derived Column Output].Columns[ESEWA_ID]"
+                      name="ESEWA_ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[SUBSTRING](#{Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Output].Columns[TRAN_PARTICULAR]},[FINDSTRING](#{Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Output].Columns[TRAN_PARTICULAR]},":",1) + 1,[FINDSTRING](#{Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Output].Columns[TRAN_PARTICULAR]},"/",1) - [FINDSTRING](#{Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Output].Columns[TRAN_PARTICULAR]},":",1) - 1)</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">SUBSTRING(TRAN_PARTICULAR,FINDSTRING(TRAN_PARTICULAR,":",1) + 1,FINDSTRING(TRAN_PARTICULAR,"/",1) - FINDSTRING(TRAN_PARTICULAR,":",1) - 1)</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Wallet Load from Internet Banking\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Wallet Load from Internet Banking\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Wallet Load from Internet Banking\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Wallet Load from Internet Banking\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Wallet Load from Internet Banking\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Wallet Load from Internet Banking\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Wallet Load from Internet Banking\Extract from CBS"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Extract from CBS"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT F.* FROM 
+(
+SELECT G.ACCT_NAME,G.FORACID,A.* FROM 
+(
+SELECT 
+    d.tran_date,
+    d.value_date,
+    d.pstd_date,
+    d.RCRE_TIME,
+    d.tran_id,
+    d.tran_particular,
+    d.tran_particular_2,
+    d.tran_amt
+FROM tbaadm.HTD d
+WHERE     
+d.PART_TRAN_TYPE = 'C'
+AND d.ACID = 'TX503170'
+AND d.ENTRY_USER_ID = 'CDCI'
+AND D.TRAN_DATE &gt;= TRUNC (SYSDATE - 2)
+AND SUBSTR(D.TRAN_PARTICULAR,1,16) = 'IBANK ESEWA LOAD'
+) A
+JOIN
+(
+SELECT * FROM TBAADM.HTD WHERE TRAN_DATE &gt;= TRUNC (SYSDATE - 2) AND PART_TRAN_TYPE = 'D' AND ENTRY_USER_ID = 'CDCI' AND SUBSTR(TRAN_PARTICULAR,1,16) = 'IBANK ESEWA LOAD'
+) B ON (A.TRAN_DATE = B.TRAN_DATE AND A.TRAN_ID = B.TRAN_ID)
+JOIN TBAADM.GAM G ON (B.ACID = G.ACID)
+UNION ALL
+SELECT G.ACCT_NAME,G.FORACID,A.* FROM 
+(
+SELECT 
+    d.tran_date,
+    d.value_date,
+    d.pstd_date,
+    d.RCRE_TIME,
+    d.tran_id,
+    d.tran_particular,
+    d.tran_particular_2,
+    d.tran_amt
+FROM tbaadm.DTD d
+WHERE     
+d.PART_TRAN_TYPE = 'C'
+AND d.ACID = 'TX503170'
+AND d.ENTRY_USER_ID = 'CDCI'
+AND SUBSTR(D.TRAN_PARTICULAR,1,16) = 'IBANK ESEWA LOAD'
+) A
+JOIN
+(
+SELECT * FROM TBAADM.DTD  WHERE PART_TRAN_TYPE = 'D' AND ENTRY_USER_ID = 'CDCI' AND SUBSTR(TRAN_PARTICULAR,1,16) = 'IBANK ESEWA LOAD'
+) B ON (A.TRAN_DATE = B.TRAN_DATE AND A.TRAN_ID = B.TRAN_ID)
+JOIN TBAADM.GAM G ON (B.ACID = G.ACID)
+) F ORDER BY F.PSTD_DATE</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Wallet Load from Internet Banking\Extract from CBS.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[192.168.32.20:1521/FINPROD.test]"
+                  connectionManagerRefId="Package.ConnectionManagers[192.168.32.20:1521/FINPROD.test]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Output].Columns[ACCT_NAME]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Output].ExternalColumns[ACCT_NAME]"
+                      length="80"
+                      lineageId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Output].Columns[ACCT_NAME]"
+                      name="ACCT_NAME"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Output].Columns[FORACID]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Output].ExternalColumns[FORACID]"
+                      length="16"
+                      lineageId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Output].Columns[FORACID]"
+                      name="FORACID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Output].Columns[TRAN_DATE]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Output].ExternalColumns[TRAN_DATE]"
+                      lineageId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Output].Columns[TRAN_DATE]"
+                      name="TRAN_DATE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Output].Columns[VALUE_DATE]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Output].ExternalColumns[VALUE_DATE]"
+                      lineageId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Output].Columns[VALUE_DATE]"
+                      name="VALUE_DATE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Output].Columns[PSTD_DATE]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Output].ExternalColumns[PSTD_DATE]"
+                      lineageId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Output].Columns[PSTD_DATE]"
+                      name="PSTD_DATE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Output].Columns[RCRE_TIME]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Output].ExternalColumns[RCRE_TIME]"
+                      lineageId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Output].Columns[RCRE_TIME]"
+                      name="RCRE_TIME"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Output].Columns[TRAN_ID]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Output].ExternalColumns[TRAN_ID]"
+                      length="9"
+                      lineageId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Output].Columns[TRAN_ID]"
+                      name="TRAN_ID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Output].Columns[TRAN_PARTICULAR]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Output].ExternalColumns[TRAN_PARTICULAR]"
+                      length="50"
+                      lineageId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Output].Columns[TRAN_PARTICULAR]"
+                      name="TRAN_PARTICULAR"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Output].Columns[TRAN_PARTICULAR_2]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Output].ExternalColumns[TRAN_PARTICULAR_2]"
+                      length="50"
+                      lineageId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Output].Columns[TRAN_PARTICULAR_2]"
+                      name="TRAN_PARTICULAR_2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Output].Columns[TRAN_AMT]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Output].ExternalColumns[TRAN_AMT]"
+                      lineageId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Output].Columns[TRAN_AMT]"
+                      name="TRAN_AMT"
+                      precision="20"
+                      scale="4"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Output].ExternalColumns[ACCT_NAME]"
+                      dataType="wstr"
+                      length="80"
+                      name="ACCT_NAME" />
+                    <externalMetadataColumn
+                      refId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Output].ExternalColumns[FORACID]"
+                      dataType="wstr"
+                      length="16"
+                      name="FORACID" />
+                    <externalMetadataColumn
+                      refId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Output].ExternalColumns[TRAN_DATE]"
+                      dataType="dbTimeStamp"
+                      name="TRAN_DATE" />
+                    <externalMetadataColumn
+                      refId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Output].ExternalColumns[VALUE_DATE]"
+                      dataType="dbTimeStamp"
+                      name="VALUE_DATE" />
+                    <externalMetadataColumn
+                      refId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Output].ExternalColumns[PSTD_DATE]"
+                      dataType="dbTimeStamp"
+                      name="PSTD_DATE" />
+                    <externalMetadataColumn
+                      refId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Output].ExternalColumns[RCRE_TIME]"
+                      dataType="dbTimeStamp"
+                      name="RCRE_TIME" />
+                    <externalMetadataColumn
+                      refId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Output].ExternalColumns[TRAN_ID]"
+                      dataType="wstr"
+                      length="9"
+                      name="TRAN_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Output].ExternalColumns[TRAN_PARTICULAR]"
+                      dataType="wstr"
+                      length="50"
+                      name="TRAN_PARTICULAR" />
+                    <externalMetadataColumn
+                      refId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Output].ExternalColumns[TRAN_PARTICULAR_2]"
+                      dataType="wstr"
+                      length="50"
+                      name="TRAN_PARTICULAR_2" />
+                    <externalMetadataColumn
+                      refId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Output].ExternalColumns[TRAN_AMT]"
+                      dataType="numeric"
+                      name="TRAN_AMT"
+                      precision="20"
+                      scale="4" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Error Output].Columns[ACCT_NAME]"
+                      dataType="wstr"
+                      length="80"
+                      lineageId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Error Output].Columns[ACCT_NAME]"
+                      name="ACCT_NAME" />
+                    <outputColumn
+                      refId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Error Output].Columns[FORACID]"
+                      dataType="wstr"
+                      length="16"
+                      lineageId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Error Output].Columns[FORACID]"
+                      name="FORACID" />
+                    <outputColumn
+                      refId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Error Output].Columns[TRAN_DATE]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Error Output].Columns[TRAN_DATE]"
+                      name="TRAN_DATE" />
+                    <outputColumn
+                      refId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Error Output].Columns[VALUE_DATE]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Error Output].Columns[VALUE_DATE]"
+                      name="VALUE_DATE" />
+                    <outputColumn
+                      refId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Error Output].Columns[PSTD_DATE]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Error Output].Columns[PSTD_DATE]"
+                      name="PSTD_DATE" />
+                    <outputColumn
+                      refId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Error Output].Columns[RCRE_TIME]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Error Output].Columns[RCRE_TIME]"
+                      name="RCRE_TIME" />
+                    <outputColumn
+                      refId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Error Output].Columns[TRAN_ID]"
+                      dataType="wstr"
+                      length="9"
+                      lineageId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Error Output].Columns[TRAN_ID]"
+                      name="TRAN_ID" />
+                    <outputColumn
+                      refId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Error Output].Columns[TRAN_PARTICULAR]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Error Output].Columns[TRAN_PARTICULAR]"
+                      name="TRAN_PARTICULAR" />
+                    <outputColumn
+                      refId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Error Output].Columns[TRAN_PARTICULAR_2]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Error Output].Columns[TRAN_PARTICULAR_2]"
+                      name="TRAN_PARTICULAR_2" />
+                    <outputColumn
+                      refId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Error Output].Columns[TRAN_AMT]"
+                      dataType="numeric"
+                      lineageId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Error Output].Columns[TRAN_AMT]"
+                      name="TRAN_AMT"
+                      precision="20"
+                      scale="4" />
+                    <outputColumn
+                      refId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Wallet Load from Internet Banking.Paths[Data Conversion Output]"
+              endId="Package\Wallet Load from Internet Banking\35 Sever.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\Wallet Load from Internet Banking\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Wallet Load from Internet Banking.Paths[Derived Column Output]"
+              endId="Package\Wallet Load from Internet Banking\Data Conversion.Inputs[Data Conversion Input]"
+              name="Derived Column Output"
+              startId="Package\Wallet Load from Internet Banking\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Wallet Load from Internet Banking.Paths[OLE DB Source Output]"
+              endId="Package\Wallet Load from Internet Banking\Derived Column.Inputs[Derived Column Input]"
+              name="OLE DB Source Output"
+              startId="Package\Wallet Load from Internet Banking\Extract from CBS.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{40F494AE-8F9A-4CF2-AE79-EBD4AB7DE712}"
+      DTS:From="Package\Wallet Load from Internet Banking"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Clean data to be inserted in 204" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{9CF1FFD2-0802-46EA-A066-8BD90E793A82}"
+      DTS:From="Package\Clean Old data from TEMP Table in 35"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Wallet Load from Internet Banking" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{D0D45DA5-B185-4C42-8D0C-9041E6F099D2}"
+      DTS:From="Package\Clean data to be inserted in 204"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\Insert into 204 Server" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="234,42"
+          Id="Package\Clean data to be inserted in 204"
+          TopLeft="237,209" />
+        <NodeLayout
+          Size="268,42"
+          Id="Package\Clean Old data from TEMP Table in 35"
+          TopLeft="221,54" />
+        <NodeLayout
+          Size="184,42"
+          Id="Package\Insert into 204 Server"
+          TopLeft="264,284" />
+        <NodeLayout
+          Size="245,42"
+          Id="Package\Wallet Load from Internet Banking"
+          TopLeft="229,133" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="352.75,175">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,34"
+              Start="0,0"
+              End="0,26.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="353.25,96">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,37"
+              Start="0,0"
+              End="0,29.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="355,251">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,33"
+              Start="0,0"
+              End="0,25.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Insert into 204 Server">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="127,42"
+          Id="Package\Insert into 204 Server\35 Server"
+          TopLeft="321,102" />
+        <NodeLayout
+          Size="133,42"
+          Id="Package\Insert into 204 Server\204 Server"
+          TopLeft="318,200" />
+        <EdgeLayout
+          Id="Package\Insert into 204 Server.Paths[OLE DB Source Output]"
+          TopLeft="384.5,144">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,56"
+              Start="0,0"
+              End="0,48.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,48.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Insert into 204 Server\204 Server">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Insert into 204 Server\35 Server">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Wallet Load from Internet Banking">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="161,42"
+          Id="Package\Wallet Load from Internet Banking\Data Conversion"
+          TopLeft="258,177" />
+        <NodeLayout
+          Size="158,42"
+          Id="Package\Wallet Load from Internet Banking\Derived Column"
+          TopLeft="258,97" />
+        <NodeLayout
+          Size="123,42"
+          Id="Package\Wallet Load from Internet Banking\35 Sever"
+          TopLeft="274,252" />
+        <NodeLayout
+          Size="164,42"
+          Id="Package\Wallet Load from Internet Banking\Extract from CBS"
+          TopLeft="256,20" />
+        <EdgeLayout
+          Id="Package\Wallet Load from Internet Banking.Paths[OLE DB Source Output]"
+          TopLeft="337.5,62">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,35"
+              Start="0,0"
+              End="0,27.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Wallet Load from Internet Banking.Paths[Derived Column Output]"
+          TopLeft="337.75,139">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,38"
+              Start="0,0"
+              End="0,30.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Wallet Load from Internet Banking.Paths[Data Conversion Output]"
+          TopLeft="337,219">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,33"
+              Start="0,0"
+              End="0,25.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Wallet Load from Internet Banking\35 Sever">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Wallet Load from Internet Banking\Extract from CBS">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

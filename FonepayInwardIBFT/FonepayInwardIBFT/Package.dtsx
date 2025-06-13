@@ -1,0 +1,2386 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="6/5/2025 5:39:05 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="REPORTSRV"
+  DTS:CreatorName="LXBL\Administrator"
+  DTS:DTSID="{B6AE5D70-40EC-480F-8C2D-BAE55E5BDB6B}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.121"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{9312F541-5C92-47F1-87EE-BDA5289385A6}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[(local).MakuriReport.sa]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{E47E806C-D1EB-4C91-82D7-20EDC6F81CFB}"
+      DTS:ObjectName="(local).MakuriReport.sa">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=(local);User ID=sa;Initial Catalog=MakuriReport;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAaeBhc7J5GUW38GqdVXN2NwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABNvUfYnl9plU+vLvQhsR1pAAAAAASAAACgAAAAEAAAAO4efeEtVUZXNiBxKfsjZzMYAAAAc+BRh/ZEcXS4lv+Q1CdsmjxsHa1nYP1vFAAAAFYgH8GdN9oHPP+qZU1PcAp3TBtj</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[10.0.0.35.iReporting.etl]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{599C4B50-0C42-4FB7-8D12-994A0CD74E50}"
+      DTS:ObjectName="10.0.0.35.iReporting.etl">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=10.0.0.35;User ID=etl;Initial Catalog=iReporting;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAaeBhc7J5GUW38GqdVXN2NwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADGLaKvhsbmU3ZtSzJ4i6T4AAAAAASAAACgAAAAEAAAAIi7DL3BKfQwFTzwAQPNzZkQAAAACIJ3rV3DrPqbPTXQzv0VSBQAAAD7JoaS+90Mip31Huz5qWQRDpYAxw</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[192.168.32.20:1521/FINPROD.support]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{C8A5CA28-3D92-4E89-A570-935AA7CB9D43}"
+      DTS:ObjectName="192.168.32.20:1521/FINPROD.support">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=192.168.32.20:1521/FINPROD;User ID=support;Provider=OraOLEDB.Oracle.1;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAaeBhc7J5GUW38GqdVXN2NwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAA2OKEniK5psrCWAuGrHS7lAAAAAASAAACgAAAAEAAAAKT2rU8M3+A+DM0Y4PhkC3wgAAAAzzLvXwoutBdHL/+1Etw8l1t2+aQr/fymY6wkjvHduBQUAAAAAL5BwFtUviBomFk0uAsGjZtmkzk</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost.iReporting]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{4D9DAC51-C39A-4977-BCEF-12D3FF074265}"
+      DTS:ObjectName="localhost.iReporting">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=iReporting;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Execute SQL Task"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{C1431233-0259-4604-BA69-2AB9C50110A1}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute SQL Task"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{599C4B50-0C42-4FB7-8D12-994A0CD74E50}"
+          SQLTask:SqlStatementSource="DELETE FROM FONEPAY_INWARD_IBFT_CBS WHERE CAST(PSTD_DATE AS DATE) != CAST(GETDATE() - 1 AS DATE)" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Insert data from 35 to 204 after Cleansing and Transformation"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{EB7FBF9D-9154-456C-B5D9-EE39F1BAF60F}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Insert data from 35 to 204 after Cleansing and Transformation"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Destination 204"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Destination 204"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[FONEPAY_INWARD_IBFT_TRANS]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Destination 204.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.iReporting]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.iReporting]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Destination 204.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Destination 204.Inputs[OLE DB Destination Input].Columns[CATEGORY_PURPOSE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="25"
+                      cachedName="CATEGORY_PURPOSE"
+                      externalMetadataColumnId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Destination 204.Inputs[OLE DB Destination Input].ExternalColumns[CATEGORY_PURPOSE]"
+                      lineageId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].Columns[CATEGORY_PURPOSE]" />
+                    <inputColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Destination 204.Inputs[OLE DB Destination Input].Columns[SENDER_MOBILE_NUMBER]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="SENDER_MOBILE_NUMBER"
+                      externalMetadataColumnId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Destination 204.Inputs[OLE DB Destination Input].ExternalColumns[SENDER_MOBILE_NUMBER]"
+                      lineageId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].Columns[SENDER_MOBILE_NUMBER]" />
+                    <inputColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Destination 204.Inputs[OLE DB Destination Input].Columns[DEBTOR_BANK]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="DEBTOR_BANK"
+                      externalMetadataColumnId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Destination 204.Inputs[OLE DB Destination Input].ExternalColumns[DEBTOR_BANK]"
+                      lineageId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].Columns[DEBTOR_BANK]" />
+                    <inputColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Destination 204.Inputs[OLE DB Destination Input].Columns[DEBTOR_NAME]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="DEBTOR_NAME"
+                      externalMetadataColumnId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Destination 204.Inputs[OLE DB Destination Input].ExternalColumns[DEBTOR_NAME]"
+                      lineageId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].Columns[DEBTOR_NAME]" />
+                    <inputColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Destination 204.Inputs[OLE DB Destination Input].Columns[RECORDED_DATE]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="RECORDED_DATE"
+                      externalMetadataColumnId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Destination 204.Inputs[OLE DB Destination Input].ExternalColumns[RECORDED_DATE]"
+                      lineageId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].Columns[RECORDED_DATE]" />
+                    <inputColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Destination 204.Inputs[OLE DB Destination Input].Columns[RECEIVER_ACCOUNT]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="25"
+                      cachedName="RECEIVER_ACCOUNT"
+                      externalMetadataColumnId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Destination 204.Inputs[OLE DB Destination Input].ExternalColumns[RECEIVER_ACCOUNT]"
+                      lineageId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].Columns[RECEIVER_ACCOUNT]" />
+                    <inputColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Destination 204.Inputs[OLE DB Destination Input].Columns[RECEIVER_ACCT_NAME]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="150"
+                      cachedName="RECEIVER_ACCT_NAME"
+                      externalMetadataColumnId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Destination 204.Inputs[OLE DB Destination Input].ExternalColumns[RECEIVER_ACCT_NAME]"
+                      lineageId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].Columns[RECEIVER_ACCT_NAME]" />
+                    <inputColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Destination 204.Inputs[OLE DB Destination Input].Columns[PART_TRAN_TYPE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedName="PART_TRAN_TYPE"
+                      externalMetadataColumnId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Destination 204.Inputs[OLE DB Destination Input].ExternalColumns[PART_TRAN_TYPE]"
+                      lineageId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].Columns[PART_TRAN_TYPE]" />
+                    <inputColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Destination 204.Inputs[OLE DB Destination Input].Columns[TRAN_ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="25"
+                      cachedName="TRAN_ID"
+                      externalMetadataColumnId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Destination 204.Inputs[OLE DB Destination Input].ExternalColumns[TRAN_ID]"
+                      lineageId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].Columns[TRAN_ID]" />
+                    <inputColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Destination 204.Inputs[OLE DB Destination Input].Columns[TRAN_DATE]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="TRAN_DATE"
+                      externalMetadataColumnId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Destination 204.Inputs[OLE DB Destination Input].ExternalColumns[TRAN_DATE]"
+                      lineageId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].Columns[TRAN_DATE]" />
+                    <inputColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Destination 204.Inputs[OLE DB Destination Input].Columns[VALUE_DATE]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="VALUE_DATE"
+                      externalMetadataColumnId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Destination 204.Inputs[OLE DB Destination Input].ExternalColumns[VALUE_DATE]"
+                      lineageId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].Columns[VALUE_DATE]" />
+                    <inputColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Destination 204.Inputs[OLE DB Destination Input].Columns[PSTD_DATE]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="PSTD_DATE"
+                      externalMetadataColumnId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Destination 204.Inputs[OLE DB Destination Input].ExternalColumns[PSTD_DATE]"
+                      lineageId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].Columns[PSTD_DATE]" />
+                    <inputColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Destination 204.Inputs[OLE DB Destination Input].Columns[RCRE_TIME]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="RCRE_TIME"
+                      externalMetadataColumnId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Destination 204.Inputs[OLE DB Destination Input].ExternalColumns[RCRE_TIME]"
+                      lineageId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].Columns[RCRE_TIME]" />
+                    <inputColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Destination 204.Inputs[OLE DB Destination Input].Columns[TRAN_AMT]"
+                      cachedDataType="cy"
+                      cachedName="TRAN_AMT"
+                      externalMetadataColumnId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Destination 204.Inputs[OLE DB Destination Input].ExternalColumns[TRAN_AMT]"
+                      lineageId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].Columns[TRAN_AMT]" />
+                    <inputColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Destination 204.Inputs[OLE DB Destination Input].Columns[TRAN_PARTICULAR]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="250"
+                      cachedName="TRAN_PARTICULAR"
+                      externalMetadataColumnId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Destination 204.Inputs[OLE DB Destination Input].ExternalColumns[TRAN_PARTICULAR]"
+                      lineageId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].Columns[TRAN_PARTICULAR]" />
+                    <inputColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Destination 204.Inputs[OLE DB Destination Input].Columns[TRAN_PARTICULAR_2]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="250"
+                      cachedName="TRAN_PARTICULAR_2"
+                      externalMetadataColumnId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Destination 204.Inputs[OLE DB Destination Input].ExternalColumns[TRAN_PARTICULAR_2]"
+                      lineageId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].Columns[TRAN_PARTICULAR_2]" />
+                    <inputColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Destination 204.Inputs[OLE DB Destination Input].Columns[FONEPAY_UNIQUE_ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="25"
+                      cachedName="FONEPAY_UNIQUE_ID"
+                      externalMetadataColumnId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Destination 204.Inputs[OLE DB Destination Input].ExternalColumns[FONEPAY_UNIQUE_ID]"
+                      lineageId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].Columns[FONEPAY_UNIQUE_ID]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Destination 204.Inputs[OLE DB Destination Input].ExternalColumns[CATEGORY_PURPOSE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="25"
+                      name="CATEGORY_PURPOSE" />
+                    <externalMetadataColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Destination 204.Inputs[OLE DB Destination Input].ExternalColumns[SENDER_MOBILE_NUMBER]"
+                      codePage="1252"
+                      dataType="str"
+                      length="25"
+                      name="SENDER_MOBILE_NUMBER" />
+                    <externalMetadataColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Destination 204.Inputs[OLE DB Destination Input].ExternalColumns[DEBTOR_BANK]"
+                      codePage="1252"
+                      dataType="str"
+                      length="250"
+                      name="DEBTOR_BANK" />
+                    <externalMetadataColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Destination 204.Inputs[OLE DB Destination Input].ExternalColumns[DEBTOR_NAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="250"
+                      name="DEBTOR_NAME" />
+                    <externalMetadataColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Destination 204.Inputs[OLE DB Destination Input].ExternalColumns[RECORDED_DATE]"
+                      dataType="dbTimeStamp"
+                      name="RECORDED_DATE" />
+                    <externalMetadataColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Destination 204.Inputs[OLE DB Destination Input].ExternalColumns[RECEIVER_ACCOUNT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="25"
+                      name="RECEIVER_ACCOUNT" />
+                    <externalMetadataColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Destination 204.Inputs[OLE DB Destination Input].ExternalColumns[RECEIVER_ACCT_NAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="250"
+                      name="RECEIVER_ACCT_NAME" />
+                    <externalMetadataColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Destination 204.Inputs[OLE DB Destination Input].ExternalColumns[PART_TRAN_TYPE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="25"
+                      name="PART_TRAN_TYPE" />
+                    <externalMetadataColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Destination 204.Inputs[OLE DB Destination Input].ExternalColumns[TRAN_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="25"
+                      name="TRAN_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Destination 204.Inputs[OLE DB Destination Input].ExternalColumns[TRAN_DATE]"
+                      dataType="dbTimeStamp"
+                      name="TRAN_DATE" />
+                    <externalMetadataColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Destination 204.Inputs[OLE DB Destination Input].ExternalColumns[VALUE_DATE]"
+                      dataType="dbTimeStamp"
+                      name="VALUE_DATE" />
+                    <externalMetadataColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Destination 204.Inputs[OLE DB Destination Input].ExternalColumns[PSTD_DATE]"
+                      dataType="dbTimeStamp"
+                      name="PSTD_DATE" />
+                    <externalMetadataColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Destination 204.Inputs[OLE DB Destination Input].ExternalColumns[RCRE_TIME]"
+                      dataType="dbTimeStamp"
+                      name="RCRE_TIME" />
+                    <externalMetadataColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Destination 204.Inputs[OLE DB Destination Input].ExternalColumns[TRAN_AMT]"
+                      dataType="cy"
+                      name="TRAN_AMT" />
+                    <externalMetadataColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Destination 204.Inputs[OLE DB Destination Input].ExternalColumns[TRAN_PARTICULAR]"
+                      codePage="1252"
+                      dataType="str"
+                      length="250"
+                      name="TRAN_PARTICULAR" />
+                    <externalMetadataColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Destination 204.Inputs[OLE DB Destination Input].ExternalColumns[TRAN_PARTICULAR_2]"
+                      codePage="1252"
+                      dataType="str"
+                      length="250"
+                      name="TRAN_PARTICULAR_2" />
+                    <externalMetadataColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Destination 204.Inputs[OLE DB Destination Input].ExternalColumns[FONEPAY_UNIQUE_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="25"
+                      name="FONEPAY_UNIQUE_ID" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Destination 204.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Destination 204.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Destination 204.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Destination 204.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Destination 204.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Destination 204.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Source 34"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT 
+FI.CATEGORY_PURPOSE,
+FI.SENDER_MOBILE_NUMBER,
+FI.DEBTOR_BANK,
+FI.DEBTOR_NAME,
+FI.RECORDED_DATE,
+FIC.FORACID AS RECEIVER_ACCOUNT,
+FIC.ACCT_NAME AS RECEIVER_ACCT_NAME,
+FIC.PART_TRAN_TYPE, 
+FIC.TRAN_ID,
+FIC.TRAN_DATE,
+FIC.VALUE_DATE,
+FIC.PSTD_DATE,
+FIC.RCRE_TIME,
+FIC.TRAN_AMT,
+FIC.TRAN_PARTICULAR,
+FIC.TRAN_PARTICULAR_2,
+FIC.FONEPAY_UNIQUE_ID
+FROM FONEPAY_INWARD_IBFT_CBS FIC
+JOIN FONEPAY_INWARD_IBFT_BANKSWITCH FI ON (FIC.FONEPAY_UNIQUE_ID = FI.TRANSACTION_ID)
+WHERE CAST(FI.RECORDED_DATE AS DATE) = CAST(GETDATE()-1 AS DATE)
+ORDER BY FIC.PSTD_DATE</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[10.0.0.35.iReporting.etl]"
+                  connectionManagerRefId="Package.ConnectionManagers[10.0.0.35.iReporting.etl]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].Columns[CATEGORY_PURPOSE]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].ExternalColumns[CATEGORY_PURPOSE]"
+                      length="25"
+                      lineageId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].Columns[CATEGORY_PURPOSE]"
+                      name="CATEGORY_PURPOSE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].Columns[SENDER_MOBILE_NUMBER]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].ExternalColumns[SENDER_MOBILE_NUMBER]"
+                      length="50"
+                      lineageId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].Columns[SENDER_MOBILE_NUMBER]"
+                      name="SENDER_MOBILE_NUMBER"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].Columns[DEBTOR_BANK]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].ExternalColumns[DEBTOR_BANK]"
+                      length="50"
+                      lineageId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].Columns[DEBTOR_BANK]"
+                      name="DEBTOR_BANK"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].Columns[DEBTOR_NAME]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].ExternalColumns[DEBTOR_NAME]"
+                      length="50"
+                      lineageId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].Columns[DEBTOR_NAME]"
+                      name="DEBTOR_NAME"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].Columns[RECORDED_DATE]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].ExternalColumns[RECORDED_DATE]"
+                      lineageId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].Columns[RECORDED_DATE]"
+                      name="RECORDED_DATE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].Columns[RECEIVER_ACCOUNT]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].ExternalColumns[RECEIVER_ACCOUNT]"
+                      length="25"
+                      lineageId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].Columns[RECEIVER_ACCOUNT]"
+                      name="RECEIVER_ACCOUNT"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].Columns[RECEIVER_ACCT_NAME]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].ExternalColumns[RECEIVER_ACCT_NAME]"
+                      length="150"
+                      lineageId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].Columns[RECEIVER_ACCT_NAME]"
+                      name="RECEIVER_ACCT_NAME"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].Columns[PART_TRAN_TYPE]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].ExternalColumns[PART_TRAN_TYPE]"
+                      length="5"
+                      lineageId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].Columns[PART_TRAN_TYPE]"
+                      name="PART_TRAN_TYPE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].Columns[TRAN_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].ExternalColumns[TRAN_ID]"
+                      length="25"
+                      lineageId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].Columns[TRAN_ID]"
+                      name="TRAN_ID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].Columns[TRAN_DATE]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].ExternalColumns[TRAN_DATE]"
+                      lineageId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].Columns[TRAN_DATE]"
+                      name="TRAN_DATE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].Columns[VALUE_DATE]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].ExternalColumns[VALUE_DATE]"
+                      lineageId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].Columns[VALUE_DATE]"
+                      name="VALUE_DATE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].Columns[PSTD_DATE]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].ExternalColumns[PSTD_DATE]"
+                      lineageId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].Columns[PSTD_DATE]"
+                      name="PSTD_DATE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].Columns[RCRE_TIME]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].ExternalColumns[RCRE_TIME]"
+                      lineageId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].Columns[RCRE_TIME]"
+                      name="RCRE_TIME"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].Columns[TRAN_AMT]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].ExternalColumns[TRAN_AMT]"
+                      lineageId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].Columns[TRAN_AMT]"
+                      name="TRAN_AMT"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].Columns[TRAN_PARTICULAR]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].ExternalColumns[TRAN_PARTICULAR]"
+                      length="250"
+                      lineageId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].Columns[TRAN_PARTICULAR]"
+                      name="TRAN_PARTICULAR"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].Columns[TRAN_PARTICULAR_2]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].ExternalColumns[TRAN_PARTICULAR_2]"
+                      length="250"
+                      lineageId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].Columns[TRAN_PARTICULAR_2]"
+                      name="TRAN_PARTICULAR_2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].Columns[FONEPAY_UNIQUE_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].ExternalColumns[FONEPAY_UNIQUE_ID]"
+                      length="25"
+                      lineageId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].Columns[FONEPAY_UNIQUE_ID]"
+                      name="FONEPAY_UNIQUE_ID"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].ExternalColumns[CATEGORY_PURPOSE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="25"
+                      name="CATEGORY_PURPOSE" />
+                    <externalMetadataColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].ExternalColumns[SENDER_MOBILE_NUMBER]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="SENDER_MOBILE_NUMBER" />
+                    <externalMetadataColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].ExternalColumns[DEBTOR_BANK]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DEBTOR_BANK" />
+                    <externalMetadataColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].ExternalColumns[DEBTOR_NAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DEBTOR_NAME" />
+                    <externalMetadataColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].ExternalColumns[RECORDED_DATE]"
+                      dataType="dbTimeStamp"
+                      name="RECORDED_DATE" />
+                    <externalMetadataColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].ExternalColumns[RECEIVER_ACCOUNT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="25"
+                      name="RECEIVER_ACCOUNT" />
+                    <externalMetadataColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].ExternalColumns[RECEIVER_ACCT_NAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="150"
+                      name="RECEIVER_ACCT_NAME" />
+                    <externalMetadataColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].ExternalColumns[PART_TRAN_TYPE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      name="PART_TRAN_TYPE" />
+                    <externalMetadataColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].ExternalColumns[TRAN_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="25"
+                      name="TRAN_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].ExternalColumns[TRAN_DATE]"
+                      dataType="dbTimeStamp"
+                      name="TRAN_DATE" />
+                    <externalMetadataColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].ExternalColumns[VALUE_DATE]"
+                      dataType="dbTimeStamp"
+                      name="VALUE_DATE" />
+                    <externalMetadataColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].ExternalColumns[PSTD_DATE]"
+                      dataType="dbTimeStamp"
+                      name="PSTD_DATE" />
+                    <externalMetadataColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].ExternalColumns[RCRE_TIME]"
+                      dataType="dbTimeStamp"
+                      name="RCRE_TIME" />
+                    <externalMetadataColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].ExternalColumns[TRAN_AMT]"
+                      dataType="cy"
+                      name="TRAN_AMT" />
+                    <externalMetadataColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].ExternalColumns[TRAN_PARTICULAR]"
+                      codePage="1252"
+                      dataType="str"
+                      length="250"
+                      name="TRAN_PARTICULAR" />
+                    <externalMetadataColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].ExternalColumns[TRAN_PARTICULAR_2]"
+                      codePage="1252"
+                      dataType="str"
+                      length="250"
+                      name="TRAN_PARTICULAR_2" />
+                    <externalMetadataColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output].ExternalColumns[FONEPAY_UNIQUE_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="25"
+                      name="FONEPAY_UNIQUE_ID" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Error Output].Columns[CATEGORY_PURPOSE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="25"
+                      lineageId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Error Output].Columns[CATEGORY_PURPOSE]"
+                      name="CATEGORY_PURPOSE" />
+                    <outputColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Error Output].Columns[SENDER_MOBILE_NUMBER]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Error Output].Columns[SENDER_MOBILE_NUMBER]"
+                      name="SENDER_MOBILE_NUMBER" />
+                    <outputColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Error Output].Columns[DEBTOR_BANK]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Error Output].Columns[DEBTOR_BANK]"
+                      name="DEBTOR_BANK" />
+                    <outputColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Error Output].Columns[DEBTOR_NAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Error Output].Columns[DEBTOR_NAME]"
+                      name="DEBTOR_NAME" />
+                    <outputColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Error Output].Columns[RECORDED_DATE]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Error Output].Columns[RECORDED_DATE]"
+                      name="RECORDED_DATE" />
+                    <outputColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Error Output].Columns[RECEIVER_ACCOUNT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="25"
+                      lineageId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Error Output].Columns[RECEIVER_ACCOUNT]"
+                      name="RECEIVER_ACCOUNT" />
+                    <outputColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Error Output].Columns[RECEIVER_ACCT_NAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="150"
+                      lineageId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Error Output].Columns[RECEIVER_ACCT_NAME]"
+                      name="RECEIVER_ACCT_NAME" />
+                    <outputColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Error Output].Columns[PART_TRAN_TYPE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      lineageId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Error Output].Columns[PART_TRAN_TYPE]"
+                      name="PART_TRAN_TYPE" />
+                    <outputColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Error Output].Columns[TRAN_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="25"
+                      lineageId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Error Output].Columns[TRAN_ID]"
+                      name="TRAN_ID" />
+                    <outputColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Error Output].Columns[TRAN_DATE]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Error Output].Columns[TRAN_DATE]"
+                      name="TRAN_DATE" />
+                    <outputColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Error Output].Columns[VALUE_DATE]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Error Output].Columns[VALUE_DATE]"
+                      name="VALUE_DATE" />
+                    <outputColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Error Output].Columns[PSTD_DATE]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Error Output].Columns[PSTD_DATE]"
+                      name="PSTD_DATE" />
+                    <outputColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Error Output].Columns[RCRE_TIME]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Error Output].Columns[RCRE_TIME]"
+                      name="RCRE_TIME" />
+                    <outputColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Error Output].Columns[TRAN_AMT]"
+                      dataType="cy"
+                      lineageId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Error Output].Columns[TRAN_AMT]"
+                      name="TRAN_AMT" />
+                    <outputColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Error Output].Columns[TRAN_PARTICULAR]"
+                      codePage="1252"
+                      dataType="str"
+                      length="250"
+                      lineageId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Error Output].Columns[TRAN_PARTICULAR]"
+                      name="TRAN_PARTICULAR" />
+                    <outputColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Error Output].Columns[TRAN_PARTICULAR_2]"
+                      codePage="1252"
+                      dataType="str"
+                      length="250"
+                      lineageId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Error Output].Columns[TRAN_PARTICULAR_2]"
+                      name="TRAN_PARTICULAR_2" />
+                    <outputColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Error Output].Columns[FONEPAY_UNIQUE_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="25"
+                      lineageId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Error Output].Columns[FONEPAY_UNIQUE_ID]"
+                      name="FONEPAY_UNIQUE_ID" />
+                    <outputColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Insert data from 35 to 204 after Cleansing and Transformation.Paths[OLE DB Source Output]"
+              endId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Destination 204.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Insert Inward IBFT data from CBS into 35"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{BFB0985B-77B5-4103-BE13-F6DA2D34847E}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Insert Inward IBFT data from CBS into 35"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Insert Inward IBFT data from CBS into 35\Data Conversion (DT_STR)"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion (DT_STR)"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Insert Inward IBFT data from CBS into 35\Data Conversion (DT_STR).Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Data Conversion (DT_STR).Inputs[Data Conversion Input].Columns[ACCT_NAME]"
+                      cachedDataType="wstr"
+                      cachedLength="80"
+                      cachedName="ACCT_NAME"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].Columns[ACCT_NAME]" />
+                    <inputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Data Conversion (DT_STR).Inputs[Data Conversion Input].Columns[FORACID]"
+                      cachedDataType="wstr"
+                      cachedLength="16"
+                      cachedName="FORACID"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].Columns[FORACID]" />
+                    <inputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Data Conversion (DT_STR).Inputs[Data Conversion Input].Columns[PART_TRAN_TYPE]"
+                      cachedDataType="wstr"
+                      cachedLength="1"
+                      cachedName="PART_TRAN_TYPE"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].Columns[PART_TRAN_TYPE]" />
+                    <inputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Data Conversion (DT_STR).Inputs[Data Conversion Input].Columns[ACID]"
+                      cachedDataType="wstr"
+                      cachedLength="11"
+                      cachedName="ACID"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].Columns[ACID]" />
+                    <inputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Data Conversion (DT_STR).Inputs[Data Conversion Input].Columns[TRAN_ID]"
+                      cachedDataType="wstr"
+                      cachedLength="9"
+                      cachedName="TRAN_ID"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].Columns[TRAN_ID]" />
+                    <inputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Data Conversion (DT_STR).Inputs[Data Conversion Input].Columns[TRAN_AMT]"
+                      cachedDataType="numeric"
+                      cachedName="TRAN_AMT"
+                      cachedPrecision="20"
+                      cachedScale="4"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].Columns[TRAN_AMT]" />
+                    <inputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Data Conversion (DT_STR).Inputs[Data Conversion Input].Columns[TRAN_PARTICULAR]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="TRAN_PARTICULAR"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].Columns[TRAN_PARTICULAR]" />
+                    <inputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Data Conversion (DT_STR).Inputs[Data Conversion Input].Columns[TRAN_PARTICULAR_2]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="TRAN_PARTICULAR_2"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].Columns[TRAN_PARTICULAR_2]" />
+                    <inputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Data Conversion (DT_STR).Inputs[Data Conversion Input].Columns[TRAN_RMKS]"
+                      cachedDataType="wstr"
+                      cachedLength="30"
+                      cachedName="TRAN_RMKS"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].Columns[TRAN_RMKS]" />
+                    <inputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Data Conversion (DT_STR).Inputs[Data Conversion Input].Columns[FONEPAY_UNIQUE_ID]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="FONEPAY_UNIQUE_ID"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Parse Tran particular to extract Fonepay Unique ID.Outputs[Derived Column Output].Columns[FONEPAY_UNIQUE_ID]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Insert Inward IBFT data from CBS into 35\Data Conversion (DT_STR).Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Insert Inward IBFT data from CBS into 35\Data Conversion (DT_STR).Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Data Conversion (DT_STR).Outputs[Data Conversion Output].Columns[ACCT_NAME]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="80"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Data Conversion (DT_STR).Outputs[Data Conversion Output].Columns[ACCT_NAME]"
+                      name="ACCT_NAME"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].Columns[ACCT_NAME]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Data Conversion (DT_STR).Outputs[Data Conversion Output].Columns[FORACID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="16"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Data Conversion (DT_STR).Outputs[Data Conversion Output].Columns[FORACID]"
+                      name="FORACID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].Columns[FORACID]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Data Conversion (DT_STR).Outputs[Data Conversion Output].Columns[PART_TRAN_TYPE]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="1"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Data Conversion (DT_STR).Outputs[Data Conversion Output].Columns[PART_TRAN_TYPE]"
+                      name="PART_TRAN_TYPE"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].Columns[PART_TRAN_TYPE]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Data Conversion (DT_STR).Outputs[Data Conversion Output].Columns[ACID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="11"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Data Conversion (DT_STR).Outputs[Data Conversion Output].Columns[ACID]"
+                      name="ACID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].Columns[ACID]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Data Conversion (DT_STR).Outputs[Data Conversion Output].Columns[TRAN_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="9"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Data Conversion (DT_STR).Outputs[Data Conversion Output].Columns[TRAN_ID]"
+                      name="TRAN_ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].Columns[TRAN_ID]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Data Conversion (DT_STR).Outputs[Data Conversion Output].Columns[TRAN_AMT]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Data Conversion (DT_STR).Outputs[Data Conversion Output].Columns[TRAN_AMT]"
+                      name="TRAN_AMT"
+                      precision="20"
+                      scale="4"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].Columns[TRAN_AMT]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Data Conversion (DT_STR).Outputs[Data Conversion Output].Columns[TRAN_PARTICULAR]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Data Conversion (DT_STR).Outputs[Data Conversion Output].Columns[TRAN_PARTICULAR]"
+                      name="TRAN_PARTICULAR"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].Columns[TRAN_PARTICULAR]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Data Conversion (DT_STR).Outputs[Data Conversion Output].Columns[TRAN_PARTICULAR_2]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Data Conversion (DT_STR).Outputs[Data Conversion Output].Columns[TRAN_PARTICULAR_2]"
+                      name="TRAN_PARTICULAR_2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].Columns[TRAN_PARTICULAR_2]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Data Conversion (DT_STR).Outputs[Data Conversion Output].Columns[TRAN_RMKS]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="30"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Data Conversion (DT_STR).Outputs[Data Conversion Output].Columns[TRAN_RMKS]"
+                      name="TRAN_RMKS"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].Columns[TRAN_RMKS]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Data Conversion (DT_STR).Outputs[Data Conversion Output].Columns[FONEPAY_UNIQUE_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Data Conversion (DT_STR).Outputs[Data Conversion Output].Columns[FONEPAY_UNIQUE_ID]"
+                      name="FONEPAY_UNIQUE_ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Insert Inward IBFT data from CBS into 35\Parse Tran particular to extract Fonepay Unique ID.Outputs[Derived Column Output].Columns[FONEPAY_UNIQUE_ID]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Insert Inward IBFT data from CBS into 35\Data Conversion (DT_STR).Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Insert Inward IBFT data from CBS into 35\Data Conversion (DT_STR).Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Data Conversion (DT_STR).Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Data Conversion (DT_STR).Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Data Conversion (DT_STR).Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Data Conversion (DT_STR).Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Insert Inward IBFT data from CBS into 35\Insert into 35 Server"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Insert into 35 Server"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[FONEPAY_INWARD_IBFT_CBS]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Insert Inward IBFT data from CBS into 35\Insert into 35 Server.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[10.0.0.35.iReporting.etl]"
+                  connectionManagerRefId="Package.ConnectionManagers[10.0.0.35.iReporting.etl]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Insert Inward IBFT data from CBS into 35\Insert into 35 Server.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Insert into 35 Server.Inputs[OLE DB Destination Input].Columns[PSTD_DATE]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="PSTD_DATE"
+                      externalMetadataColumnId="Package\Insert Inward IBFT data from CBS into 35\Insert into 35 Server.Inputs[OLE DB Destination Input].ExternalColumns[PSTD_DATE]"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].Columns[PSTD_DATE]" />
+                    <inputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Insert into 35 Server.Inputs[OLE DB Destination Input].Columns[RCRE_TIME]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="RCRE_TIME"
+                      externalMetadataColumnId="Package\Insert Inward IBFT data from CBS into 35\Insert into 35 Server.Inputs[OLE DB Destination Input].ExternalColumns[RCRE_TIME]"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].Columns[RCRE_TIME]" />
+                    <inputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Insert into 35 Server.Inputs[OLE DB Destination Input].Columns[TRAN_DATE]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="TRAN_DATE"
+                      externalMetadataColumnId="Package\Insert Inward IBFT data from CBS into 35\Insert into 35 Server.Inputs[OLE DB Destination Input].ExternalColumns[TRAN_DATE]"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].Columns[TRAN_DATE]" />
+                    <inputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Insert into 35 Server.Inputs[OLE DB Destination Input].Columns[VALUE_DATE]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="VALUE_DATE"
+                      externalMetadataColumnId="Package\Insert Inward IBFT data from CBS into 35\Insert into 35 Server.Inputs[OLE DB Destination Input].ExternalColumns[VALUE_DATE]"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].Columns[VALUE_DATE]" />
+                    <inputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Insert into 35 Server.Inputs[OLE DB Destination Input].Columns[ACCT_NAME]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="80"
+                      cachedName="ACCT_NAME"
+                      externalMetadataColumnId="Package\Insert Inward IBFT data from CBS into 35\Insert into 35 Server.Inputs[OLE DB Destination Input].ExternalColumns[ACCT_NAME]"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Data Conversion (DT_STR).Outputs[Data Conversion Output].Columns[ACCT_NAME]" />
+                    <inputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Insert into 35 Server.Inputs[OLE DB Destination Input].Columns[FORACID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="16"
+                      cachedName="FORACID"
+                      externalMetadataColumnId="Package\Insert Inward IBFT data from CBS into 35\Insert into 35 Server.Inputs[OLE DB Destination Input].ExternalColumns[FORACID]"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Data Conversion (DT_STR).Outputs[Data Conversion Output].Columns[FORACID]" />
+                    <inputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Insert into 35 Server.Inputs[OLE DB Destination Input].Columns[PART_TRAN_TYPE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="PART_TRAN_TYPE"
+                      externalMetadataColumnId="Package\Insert Inward IBFT data from CBS into 35\Insert into 35 Server.Inputs[OLE DB Destination Input].ExternalColumns[PART_TRAN_TYPE]"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Data Conversion (DT_STR).Outputs[Data Conversion Output].Columns[PART_TRAN_TYPE]" />
+                    <inputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Insert into 35 Server.Inputs[OLE DB Destination Input].Columns[ACID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="11"
+                      cachedName="ACID"
+                      externalMetadataColumnId="Package\Insert Inward IBFT data from CBS into 35\Insert into 35 Server.Inputs[OLE DB Destination Input].ExternalColumns[ACID]"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Data Conversion (DT_STR).Outputs[Data Conversion Output].Columns[ACID]" />
+                    <inputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Insert into 35 Server.Inputs[OLE DB Destination Input].Columns[TRAN_ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="9"
+                      cachedName="TRAN_ID"
+                      externalMetadataColumnId="Package\Insert Inward IBFT data from CBS into 35\Insert into 35 Server.Inputs[OLE DB Destination Input].ExternalColumns[TRAN_ID]"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Data Conversion (DT_STR).Outputs[Data Conversion Output].Columns[TRAN_ID]" />
+                    <inputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Insert into 35 Server.Inputs[OLE DB Destination Input].Columns[TRAN_AMT]"
+                      cachedDataType="numeric"
+                      cachedName="TRAN_AMT"
+                      cachedPrecision="20"
+                      cachedScale="4"
+                      externalMetadataColumnId="Package\Insert Inward IBFT data from CBS into 35\Insert into 35 Server.Inputs[OLE DB Destination Input].ExternalColumns[TRAN_AMT]"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Data Conversion (DT_STR).Outputs[Data Conversion Output].Columns[TRAN_AMT]" />
+                    <inputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Insert into 35 Server.Inputs[OLE DB Destination Input].Columns[TRAN_PARTICULAR]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="TRAN_PARTICULAR"
+                      externalMetadataColumnId="Package\Insert Inward IBFT data from CBS into 35\Insert into 35 Server.Inputs[OLE DB Destination Input].ExternalColumns[TRAN_PARTICULAR]"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Data Conversion (DT_STR).Outputs[Data Conversion Output].Columns[TRAN_PARTICULAR]" />
+                    <inputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Insert into 35 Server.Inputs[OLE DB Destination Input].Columns[TRAN_PARTICULAR_2]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="TRAN_PARTICULAR_2"
+                      externalMetadataColumnId="Package\Insert Inward IBFT data from CBS into 35\Insert into 35 Server.Inputs[OLE DB Destination Input].ExternalColumns[TRAN_PARTICULAR_2]"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Data Conversion (DT_STR).Outputs[Data Conversion Output].Columns[TRAN_PARTICULAR_2]" />
+                    <inputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Insert into 35 Server.Inputs[OLE DB Destination Input].Columns[TRAN_RMKS]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="TRAN_RMKS"
+                      externalMetadataColumnId="Package\Insert Inward IBFT data from CBS into 35\Insert into 35 Server.Inputs[OLE DB Destination Input].ExternalColumns[TRAN_RMKS]"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Data Conversion (DT_STR).Outputs[Data Conversion Output].Columns[TRAN_RMKS]" />
+                    <inputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Insert into 35 Server.Inputs[OLE DB Destination Input].Columns[FONEPAY_UNIQUE_ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="FONEPAY_UNIQUE_ID"
+                      externalMetadataColumnId="Package\Insert Inward IBFT data from CBS into 35\Insert into 35 Server.Inputs[OLE DB Destination Input].ExternalColumns[FONEPAY_UNIQUE_ID]"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Data Conversion (DT_STR).Outputs[Data Conversion Output].Columns[FONEPAY_UNIQUE_ID]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Insert into 35 Server.Inputs[OLE DB Destination Input].ExternalColumns[ACCT_NAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="150"
+                      name="ACCT_NAME" />
+                    <externalMetadataColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Insert into 35 Server.Inputs[OLE DB Destination Input].ExternalColumns[FORACID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="25"
+                      name="FORACID" />
+                    <externalMetadataColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Insert into 35 Server.Inputs[OLE DB Destination Input].ExternalColumns[PSTD_DATE]"
+                      dataType="dbTimeStamp"
+                      name="PSTD_DATE" />
+                    <externalMetadataColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Insert into 35 Server.Inputs[OLE DB Destination Input].ExternalColumns[RCRE_TIME]"
+                      dataType="dbTimeStamp"
+                      name="RCRE_TIME" />
+                    <externalMetadataColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Insert into 35 Server.Inputs[OLE DB Destination Input].ExternalColumns[PART_TRAN_TYPE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      name="PART_TRAN_TYPE" />
+                    <externalMetadataColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Insert into 35 Server.Inputs[OLE DB Destination Input].ExternalColumns[ACID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="25"
+                      name="ACID" />
+                    <externalMetadataColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Insert into 35 Server.Inputs[OLE DB Destination Input].ExternalColumns[TRAN_DATE]"
+                      dataType="dbTimeStamp"
+                      name="TRAN_DATE" />
+                    <externalMetadataColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Insert into 35 Server.Inputs[OLE DB Destination Input].ExternalColumns[TRAN_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="25"
+                      name="TRAN_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Insert into 35 Server.Inputs[OLE DB Destination Input].ExternalColumns[VALUE_DATE]"
+                      dataType="dbTimeStamp"
+                      name="VALUE_DATE" />
+                    <externalMetadataColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Insert into 35 Server.Inputs[OLE DB Destination Input].ExternalColumns[TRAN_AMT]"
+                      dataType="cy"
+                      name="TRAN_AMT" />
+                    <externalMetadataColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Insert into 35 Server.Inputs[OLE DB Destination Input].ExternalColumns[TRAN_PARTICULAR]"
+                      codePage="1252"
+                      dataType="str"
+                      length="250"
+                      name="TRAN_PARTICULAR" />
+                    <externalMetadataColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Insert into 35 Server.Inputs[OLE DB Destination Input].ExternalColumns[TRAN_PARTICULAR_2]"
+                      codePage="1252"
+                      dataType="str"
+                      length="250"
+                      name="TRAN_PARTICULAR_2" />
+                    <externalMetadataColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Insert into 35 Server.Inputs[OLE DB Destination Input].ExternalColumns[TRAN_RMKS]"
+                      codePage="1252"
+                      dataType="str"
+                      length="250"
+                      name="TRAN_RMKS" />
+                    <externalMetadataColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Insert into 35 Server.Inputs[OLE DB Destination Input].ExternalColumns[FONEPAY_UNIQUE_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="25"
+                      name="FONEPAY_UNIQUE_ID" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Insert Inward IBFT data from CBS into 35\Insert into 35 Server.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Insert Inward IBFT data from CBS into 35\Insert into 35 Server.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Insert into 35 Server.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Insert into 35 Server.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Insert into 35 Server.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Insert into 35 Server.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Insert Inward IBFT data from CBS into 35\Parse Tran particular to extract Fonepay Unique ID"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Parse Tran particular to extract Fonepay Unique ID"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Insert Inward IBFT data from CBS into 35\Parse Tran particular to extract Fonepay Unique ID.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Parse Tran particular to extract Fonepay Unique ID.Inputs[Derived Column Input].Columns[TRAN_PARTICULAR]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="TRAN_PARTICULAR"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].Columns[TRAN_PARTICULAR]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Insert Inward IBFT data from CBS into 35\Parse Tran particular to extract Fonepay Unique ID.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Insert Inward IBFT data from CBS into 35\Parse Tran particular to extract Fonepay Unique ID.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Parse Tran particular to extract Fonepay Unique ID.Outputs[Derived Column Output].Columns[FONEPAY_UNIQUE_ID]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Parse Tran particular to extract Fonepay Unique ID.Outputs[Derived Column Output].Columns[FONEPAY_UNIQUE_ID]"
+                      name="FONEPAY_UNIQUE_ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[SUBSTRING](#{Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].Columns[TRAN_PARTICULAR]},[FINDSTRING](#{Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].Columns[TRAN_PARTICULAR]},":",2) + 1,[FINDSTRING](#{Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].Columns[TRAN_PARTICULAR]},":",3) - [FINDSTRING](#{Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].Columns[TRAN_PARTICULAR]},":",2) - 1)</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">SUBSTRING(TRAN_PARTICULAR,FINDSTRING(TRAN_PARTICULAR,":",2) + 1,FINDSTRING(TRAN_PARTICULAR,":",3) - FINDSTRING(TRAN_PARTICULAR,":",2) - 1)</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Insert Inward IBFT data from CBS into 35\Parse Tran particular to extract Fonepay Unique ID.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Insert Inward IBFT data from CBS into 35\Parse Tran particular to extract Fonepay Unique ID.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Parse Tran particular to extract Fonepay Unique ID.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Parse Tran particular to extract Fonepay Unique ID.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Parse Tran particular to extract Fonepay Unique ID.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Parse Tran particular to extract Fonepay Unique ID.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Pull data from CBS"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT 
+    G.ACCT_NAME,
+    G.FORACID,
+    H.PSTD_DATE,
+    H.RCRE_TIME,
+    H.PART_TRAN_TYPE,
+    FONEPAYAC.* 
+FROM 
+(
+    SELECT ACID, TRAN_DATE, TRAN_ID, VALUE_DATE, TRAN_AMT, TRAN_PARTICULAR, TRAN_PARTICULAR_2, TRAN_RMKS 
+    FROM TBAADM.HTD WHERE 
+    TRAN_DATE &gt;= trunc(sysdate-2)
+    AND ACID = 'TX2344962'
+    AND PART_TRAN_TYPE = 'D' 
+AND SUBSTR(TRAN_PARTICULAR,1,9) = 'FON:IBFT:'
+AND ENTRY_USER_ID = 'CDCI'
+) FONEPAYAC
+JOIN TBAADM.HTD H ON (FONEPAYAC.TRAN_ID = H.TRAN_ID AND FONEPAYAC.TRAN_DATE = H.TRAN_DATE)
+JOIN TBAADM.GAM G ON (G.ACID = H.ACID) WHERE H.PART_TRAN_TYPE = 'C'
+AND H.TRAN_DATE &gt;= trunc(sysdate-2)
+UNION ALL
+SELECT 
+    G.ACCT_NAME,
+    G.FORACID,
+    H.PSTD_DATE,
+    H.RCRE_TIME,
+    H.PART_TRAN_TYPE,
+    FONEPAYAC.* 
+FROM 
+(
+    SELECT ACID, TRAN_DATE, TRAN_ID, VALUE_DATE, TRAN_AMT, TRAN_PARTICULAR, TRAN_PARTICULAR_2, TRAN_RMKS 
+    FROM TBAADM.DTD WHERE 
+    TRAN_DATE &gt;= trunc(sysdate-2)
+    AND ACID = 'TX2344962'
+    AND PART_TRAN_TYPE = 'D' 
+AND SUBSTR(TRAN_PARTICULAR,1,9) = 'FON:IBFT:'
+AND ENTRY_USER_ID = 'CDCI'
+) FONEPAYAC
+JOIN TBAADM.DTD H ON (FONEPAYAC.TRAN_ID = H.TRAN_ID AND FONEPAYAC.TRAN_DATE = H.TRAN_DATE)
+JOIN TBAADM.GAM G ON (G.ACID = H.ACID) WHERE H.PART_TRAN_TYPE = 'C'
+UNION ALL
+SELECT 
+    G.ACCT_NAME,
+    G.FORACID,
+    H.PSTD_DATE,
+    H.RCRE_TIME,
+    H.PART_TRAN_TYPE,
+    FONEPAYAC.* 
+FROM 
+(
+    SELECT ACID, TRAN_DATE, TRAN_ID, VALUE_DATE, TRAN_AMT, TRAN_PARTICULAR, TRAN_PARTICULAR_2, TRAN_RMKS 
+    FROM TBAADM.DTD 
+    WHERE  ACID = 'TX2344962'
+    AND PART_TRAN_TYPE = 'D' 
+AND SUBSTR(TRAN_PARTICULAR,1,9) = 'FON:IBFT:'
+AND ENTRY_USER_ID = 'CDCI'
+) FONEPAYAC
+JOIN TBAADM.DTD H ON (FONEPAYAC.TRAN_ID = H.TRAN_ID AND FONEPAYAC.TRAN_DATE = H.TRAN_DATE)
+JOIN TBAADM.GAM G ON (G.ACID = H.ACID) WHERE H.PART_TRAN_TYPE = 'C'</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[192.168.32.20:1521/FINPROD.support]"
+                  connectionManagerRefId="Package.ConnectionManagers[192.168.32.20:1521/FINPROD.support]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].Columns[ACCT_NAME]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].ExternalColumns[ACCT_NAME]"
+                      length="80"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].Columns[ACCT_NAME]"
+                      name="ACCT_NAME"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].Columns[FORACID]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].ExternalColumns[FORACID]"
+                      length="16"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].Columns[FORACID]"
+                      name="FORACID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].Columns[PSTD_DATE]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].ExternalColumns[PSTD_DATE]"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].Columns[PSTD_DATE]"
+                      name="PSTD_DATE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].Columns[RCRE_TIME]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].ExternalColumns[RCRE_TIME]"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].Columns[RCRE_TIME]"
+                      name="RCRE_TIME"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].Columns[PART_TRAN_TYPE]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].ExternalColumns[PART_TRAN_TYPE]"
+                      length="1"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].Columns[PART_TRAN_TYPE]"
+                      name="PART_TRAN_TYPE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].Columns[ACID]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].ExternalColumns[ACID]"
+                      length="11"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].Columns[ACID]"
+                      name="ACID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].Columns[TRAN_DATE]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].ExternalColumns[TRAN_DATE]"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].Columns[TRAN_DATE]"
+                      name="TRAN_DATE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].Columns[TRAN_ID]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].ExternalColumns[TRAN_ID]"
+                      length="9"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].Columns[TRAN_ID]"
+                      name="TRAN_ID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].Columns[VALUE_DATE]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].ExternalColumns[VALUE_DATE]"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].Columns[VALUE_DATE]"
+                      name="VALUE_DATE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].Columns[TRAN_AMT]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].ExternalColumns[TRAN_AMT]"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].Columns[TRAN_AMT]"
+                      name="TRAN_AMT"
+                      precision="20"
+                      scale="4"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].Columns[TRAN_PARTICULAR]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].ExternalColumns[TRAN_PARTICULAR]"
+                      length="50"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].Columns[TRAN_PARTICULAR]"
+                      name="TRAN_PARTICULAR"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].Columns[TRAN_PARTICULAR_2]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].ExternalColumns[TRAN_PARTICULAR_2]"
+                      length="50"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].Columns[TRAN_PARTICULAR_2]"
+                      name="TRAN_PARTICULAR_2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].Columns[TRAN_RMKS]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].ExternalColumns[TRAN_RMKS]"
+                      length="30"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].Columns[TRAN_RMKS]"
+                      name="TRAN_RMKS"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].ExternalColumns[ACCT_NAME]"
+                      dataType="wstr"
+                      length="80"
+                      name="ACCT_NAME" />
+                    <externalMetadataColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].ExternalColumns[FORACID]"
+                      dataType="wstr"
+                      length="16"
+                      name="FORACID" />
+                    <externalMetadataColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].ExternalColumns[PSTD_DATE]"
+                      dataType="dbTimeStamp"
+                      name="PSTD_DATE" />
+                    <externalMetadataColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].ExternalColumns[RCRE_TIME]"
+                      dataType="dbTimeStamp"
+                      name="RCRE_TIME" />
+                    <externalMetadataColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].ExternalColumns[PART_TRAN_TYPE]"
+                      dataType="wstr"
+                      length="1"
+                      name="PART_TRAN_TYPE" />
+                    <externalMetadataColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].ExternalColumns[ACID]"
+                      dataType="wstr"
+                      length="11"
+                      name="ACID" />
+                    <externalMetadataColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].ExternalColumns[TRAN_DATE]"
+                      dataType="dbTimeStamp"
+                      name="TRAN_DATE" />
+                    <externalMetadataColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].ExternalColumns[TRAN_ID]"
+                      dataType="wstr"
+                      length="9"
+                      name="TRAN_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].ExternalColumns[VALUE_DATE]"
+                      dataType="dbTimeStamp"
+                      name="VALUE_DATE" />
+                    <externalMetadataColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].ExternalColumns[TRAN_AMT]"
+                      dataType="numeric"
+                      name="TRAN_AMT"
+                      precision="20"
+                      scale="4" />
+                    <externalMetadataColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].ExternalColumns[TRAN_PARTICULAR]"
+                      dataType="wstr"
+                      length="50"
+                      name="TRAN_PARTICULAR" />
+                    <externalMetadataColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].ExternalColumns[TRAN_PARTICULAR_2]"
+                      dataType="wstr"
+                      length="50"
+                      name="TRAN_PARTICULAR_2" />
+                    <externalMetadataColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output].ExternalColumns[TRAN_RMKS]"
+                      dataType="wstr"
+                      length="30"
+                      name="TRAN_RMKS" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Error Output].Columns[ACCT_NAME]"
+                      dataType="wstr"
+                      length="80"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Error Output].Columns[ACCT_NAME]"
+                      name="ACCT_NAME" />
+                    <outputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Error Output].Columns[FORACID]"
+                      dataType="wstr"
+                      length="16"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Error Output].Columns[FORACID]"
+                      name="FORACID" />
+                    <outputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Error Output].Columns[PSTD_DATE]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Error Output].Columns[PSTD_DATE]"
+                      name="PSTD_DATE" />
+                    <outputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Error Output].Columns[RCRE_TIME]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Error Output].Columns[RCRE_TIME]"
+                      name="RCRE_TIME" />
+                    <outputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Error Output].Columns[PART_TRAN_TYPE]"
+                      dataType="wstr"
+                      length="1"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Error Output].Columns[PART_TRAN_TYPE]"
+                      name="PART_TRAN_TYPE" />
+                    <outputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Error Output].Columns[ACID]"
+                      dataType="wstr"
+                      length="11"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Error Output].Columns[ACID]"
+                      name="ACID" />
+                    <outputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Error Output].Columns[TRAN_DATE]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Error Output].Columns[TRAN_DATE]"
+                      name="TRAN_DATE" />
+                    <outputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Error Output].Columns[TRAN_ID]"
+                      dataType="wstr"
+                      length="9"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Error Output].Columns[TRAN_ID]"
+                      name="TRAN_ID" />
+                    <outputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Error Output].Columns[VALUE_DATE]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Error Output].Columns[VALUE_DATE]"
+                      name="VALUE_DATE" />
+                    <outputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Error Output].Columns[TRAN_AMT]"
+                      dataType="numeric"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Error Output].Columns[TRAN_AMT]"
+                      name="TRAN_AMT"
+                      precision="20"
+                      scale="4" />
+                    <outputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Error Output].Columns[TRAN_PARTICULAR]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Error Output].Columns[TRAN_PARTICULAR]"
+                      name="TRAN_PARTICULAR" />
+                    <outputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Error Output].Columns[TRAN_PARTICULAR_2]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Error Output].Columns[TRAN_PARTICULAR_2]"
+                      name="TRAN_PARTICULAR_2" />
+                    <outputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Error Output].Columns[TRAN_RMKS]"
+                      dataType="wstr"
+                      length="30"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Error Output].Columns[TRAN_RMKS]"
+                      name="TRAN_RMKS" />
+                    <outputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Insert Inward IBFT data from CBS into 35.Paths[Data Conversion Output]"
+              endId="Package\Insert Inward IBFT data from CBS into 35\Insert into 35 Server.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\Insert Inward IBFT data from CBS into 35\Data Conversion (DT_STR).Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Insert Inward IBFT data from CBS into 35.Paths[Derived Column Output]"
+              endId="Package\Insert Inward IBFT data from CBS into 35\Data Conversion (DT_STR).Inputs[Data Conversion Input]"
+              name="Derived Column Output"
+              startId="Package\Insert Inward IBFT data from CBS into 35\Parse Tran particular to extract Fonepay Unique ID.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Insert Inward IBFT data from CBS into 35.Paths[OLE DB Source Output]"
+              endId="Package\Insert Inward IBFT data from CBS into 35\Parse Tran particular to extract Fonepay Unique ID.Inputs[Derived Column Input]"
+              name="OLE DB Source Output"
+              startId="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Truncate existing CBS Inward IBFT data from 35"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{995E5B3F-DF10-4CC8-867F-55497633E612}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Truncate existing CBS Inward IBFT data from 35"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{599C4B50-0C42-4FB7-8D12-994A0CD74E50}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE FONEPAY_INWARD_IBFT_CBS" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{251B0202-7BD9-41F6-8FA6-22B09563487A}"
+      DTS:From="Package\Truncate existing CBS Inward IBFT data from 35"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Insert Inward IBFT data from CBS into 35" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{EE6E938D-5F20-4632-AF0B-43328B886948}"
+      DTS:From="Package\Insert Inward IBFT data from CBS into 35"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Execute SQL Task" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{1B3E0155-24ED-4A60-9A5A-B9C038FCE864}"
+      DTS:From="Package\Execute SQL Task"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\Insert data from 35 to 204 after Cleansing and Transformation" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="374.666666666667,42"
+          Id="Package\Insert data from 35 to 204 after Cleansing and Transformation"
+          TopLeft="79.8611099210878,245.194440060026" />
+        <NodeLayout
+          Size="276,42.6666666666667"
+          Id="Package\Insert Inward IBFT data from CBS into 35"
+          TopLeft="120.729164867662,82.7666651866834" />
+        <NodeLayout
+          Size="309.333333333334,42.6666666666667"
+          Id="Package\Truncate existing CBS Inward IBFT data from 35"
+          TopLeft="108.854165044613,14.0833330815037" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="261.124998289471,56.7499997481704">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,26.016665438513"
+              Start="0,0"
+              End="0,18.516665438513">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.516665438513" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="164,42.6666666666667"
+          Id="Package\Execute SQL Task"
+          TopLeft="184.02777503555,166.569441793776" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="262.378469951606,125.43333185335">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,41.1361099404262"
+              Start="0,0"
+              End="0,33.6361099404262">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.6361099404262" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="266.611109144986,209.236108460443">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,35.9583315995832"
+              Start="0,0"
+              End="0,28.4583315995832">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.4583315995832" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Insert data from 35 to 204 after Cleansing and Transformation">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="126.666666666667,42.6666666666667"
+          Id="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34"
+          TopLeft="369.333333333333,37.3333333333333" />
+        <NodeLayout
+          Size="153.333333333334,42.6666666666667"
+          Id="Package\Insert data from 35 to 204 after Cleansing and Transformation\Destination 204"
+          TopLeft="361.333333333333,134" />
+        <EdgeLayout
+          Id="Package\Insert data from 35 to 204 after Cleansing and Transformation.Paths[OLE DB Source Output]"
+          TopLeft="435.333333333333,80">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,54"
+              Start="0,0"
+              End="0,46.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,46.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Insert data from 35 to 204 after Cleansing and Transformation\Destination 204">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Insert data from 35 to 204 after Cleansing and Transformation\Source 34">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Insert Inward IBFT data from CBS into 35">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="177.333333333334,42.6666666666667"
+          Id="Package\Insert Inward IBFT data from CBS into 35\Insert into 35 Server"
+          TopLeft="462.499993108213,173.333330233892" />
+        <NodeLayout
+          Size="168,42.6666666666667"
+          Id="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS"
+          TopLeft="15.4166664369404,12.0249997849763" />
+        <NodeLayout
+          Size="320,42.6666666666667"
+          Id="Package\Insert Inward IBFT data from CBS into 35\Parse Tran particular to extract Fonepay Unique ID"
+          TopLeft="55.5555547277134,62.8333322097858" />
+        <NodeLayout
+          Size="206.666666666667,42.6666666666667"
+          Id="Package\Insert Inward IBFT data from CBS into 35\Data Conversion (DT_STR)"
+          TopLeft="303.472217700134,116.999997907877" />
+        <EdgeLayout
+          Id="Package\Insert Inward IBFT data from CBS into 35.Paths[OLE DB Source Output]"
+          TopLeft="183.41666643694,33.3583331183096">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="32.138888290773,29.4749990914762"
+              Start="0,0"
+              End="32.138888290773,21.9749990914762">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="28.138888290773,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="28.138888290773,0"
+                    Point2="32.138888290773,0"
+                    Point3="32.138888290773,4" />
+                  <mssgle:LineSegment
+                    End="32.138888290773,21.9749990914762" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Insert Inward IBFT data from CBS into 35.Paths[Derived Column Output]"
+          TopLeft="375.555554727713,84.1666655431191">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="31.2499963057536,32.833332364758"
+              Start="0,0"
+              End="31.2499963057536,25.333332364758">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="27.2499963057536,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="27.2499963057536,0"
+                    Point2="31.2499963057536,0"
+                    Point3="31.2499963057536,4" />
+                  <mssgle:LineSegment
+                    End="31.2499963057536,25.333332364758" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Insert Inward IBFT data from CBS into 35.Paths[Data Conversion Output]"
+          TopLeft="510.1388843668,138.33333124121">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="41.0277754080792,34.9999989926814"
+              Start="0,0"
+              End="41.0277754080792,27.4999989926814">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="37.0277754080792,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="37.0277754080792,0"
+                    Point2="41.0277754080792,0"
+                    Point3="41.0277754080792,4" />
+                  <mssgle:LineSegment
+                    End="41.0277754080792,27.4999989926814" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Insert Inward IBFT data from CBS into 35\Insert into 35 Server">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Insert Inward IBFT data from CBS into 35\Pull data from CBS">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

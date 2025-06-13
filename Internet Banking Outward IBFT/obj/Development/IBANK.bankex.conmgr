@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="IBANK.bankex"
+  DTS:DTSID="{C11E5B25-6B14-405A-8F81-54A6A53AD11C}"
+  DTS:CreationName="ODBC">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="uid=bankex;Dsn=IBANK;">
+      <DTS:Password
+        DTS:Name="pwd"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAfgJz0wOxcU+zzVhht39OEAAAAAACAAAAAAAQZgAAAAEAACAAAABA1pvUiED7tOFXWWL/jildK9/YlwIgYrwLykj4UktCRQAAAAAOgAAAAAIAACAAAAArruIfB/jCqeE0jArkIdhEyvldQziwo3we1YsObtwuUoAAAAA3vkno3JjOv3ppVj0NjC3W5viC7wl8E93143hhSUATGtKOl5bZ+jUTaupzYKAF97x8fCr8TPxA6uGnCohf3nwhMPSg59xorpDNANIP3d4Qpt534XZir8Vb+yMJgygnekHjil0aH8Qrr/UgB2Jz9J8hVodZgKxJoNaDy9HZCaUA80AAAAA2s1HVAdAKKErZXM+0U/oL1mmZItxk6W2AvDXLSJ4StY1dX6eQCkKs48CqCxHvjLT1QM72F5BSbt+JTLWxEzpb</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="73"
-  DTS:VersionGUID="{100AEBB8-BA12-422D-847F-E2B354ABA848}">
+  DTS:VersionBuild="76"
+  DTS:VersionGUID="{D37EA0AF-5243-4B84-A766-7510B5B857DA}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAfgJz0wOxcU+zzVhht39OEAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAA7bmK3DKusGpi3wsOOaFvKHXB3PT14OFyaivpJrgGwdgAAAAAOgAAAAAIAACAAAACSCY+Vo19RyJytb+M0VrXNQJNd6Zep4xrLfRySq/z20iAAAAA3am3WU1Q65Gpm1yTvfS0dibBHwP2bQ+HwFolYv83LRUAAAAAmqVoywCrQEfhce27ojt78T5+tg5A8h1da/s0PXZmGD+Sa2AOofjyfl6YVshSVTO3/daTvevCjDbHkPzT52Qpm</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAfgJz0wOxcU+zzVhht39OEAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABfALVn8np3kkcIA/FXBjl0cSUVHkpl8pSN3klFw1qhUAAAAAAOgAAAAAIAACAAAAAwQrhrNl7i5YstaebehM25LhNYpDtiVsGNRjTyhRbgZCAAAACre0sge1yxVPDePtNq0ky/3Z81Iy2tRpNNE6ILi7hY5EAAAAC7YuVM+iIXKFKU0jiGUos/33FSJVS6zK8WRy32uyUL75VxVVEtIaOpwk7O1jQpCCxLqu5cN++bWRZrStt54zuh</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -46,7 +46,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAfgJz0wOxcU+zzVhht39OEAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADSHxphXDLlpFtuH1ctK42U0bF3SweNwM2vws2w/gscPQAAAAAOgAAAAAIAACAAAAArIUnj64c+zm7GLTfjqsn47mjWeHQpl/Vh0brsmpX8diAAAACeQgJYn+Bqv0eT1h1HlP3oJT7gSa+Z6VfokWDunzg1d0AAAABysJknYuy/MP95eRmKg8eBHUpHMPxmWQeYBfumf9/4qJUr8IFwAh+UPe/NUZZWlw00ne/riuq0SZlJkvpvJUh3</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAfgJz0wOxcU+zzVhht39OEAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAJnuqeNPkGjDTfz03U/TBLRFCmKS4v/vE+qF6j2Ai0wgAAAAAOgAAAAAIAACAAAAAirolDMjHJrltbvs6RTf/49wA2pmyCEb5CyEKtJJHbXyAAAABYX/uuc+vOigxKWl/XHFFsZ8OPNdLJSzY+zeiysXckakAAAACZQ/YZ/YqlSU8SulNe1/3TxHH7YKj4MsyQ73Rr8eUEnWf/GLS3/1URLetkjBUS2M0Stss5SH7oZdrPV3jjt8mV</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -77,6 +77,23 @@
   </DTS:ConnectionManagers>
   <DTS:Variables />
   <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Execute SQL Task"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{C4D04A46-0EC4-4E05-A244-AA9F6D458D37}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute SQL Task"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="2">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{E0F5C485-7AD2-4AAF-BC4D-C9B100224E18}"
+          SQLTask:SqlStatementSource="DELETE FROM MOBILE_MONEY_CBS_IBFT WHERE CAST(PSTD_DATE AS DATE) != CAST(GETDATE() - 1 AS DATE)" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\Insert into Local Table First"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
@@ -4146,7 +4163,7 @@ LEFT JOIN MOBILE_MONEY_SWIFT_CODE_MAPPING M ON (B.SWIFT_CODE = M.FONEPAY_BANK_CO
       DTS:LocaleID="-1"
       DTS:ObjectName="Truncate Mobile Banking Data"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -4163,12 +4180,29 @@ LEFT JOIN MOBILE_MONEY_SWIFT_CODE_MAPPING M ON (B.SWIFT_CODE = M.FONEPAY_BANK_CO
       DTS:LocaleID="-1"
       DTS:ObjectName="Truncate Swift Mapping"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{E0F5C485-7AD2-4AAF-BC4D-C9B100224E18}"
           SQLTask:SqlStatementSource="TRUNCATE TABLE MOBILE_MONEY_SWIFT_CODE_MAPPING" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Update Acct Name in 204"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{0584133E-7CD3-44F3-B17D-1C5024D49F9E}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Update Acct Name in 204"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{616219D5-7964-4F70-8096-797FF7061470}"
+          SQLTask:SqlStatementSource="UPDATE MOBILE_MONEY_IBFT_TRANSACTION SET DEST_ACCT_NAME = '' where SUBSTRING(DEST_ACCT_NAME,1,16) = 'IBFT_DEST_SWIFT:'" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -4197,6 +4231,22 @@ LEFT JOIN MOBILE_MONEY_SWIFT_CODE_MAPPING M ON (B.SWIFT_CODE = M.FONEPAY_BANK_CO
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 10"
       DTS:To="Package\Insert into Local Table First" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 11]"
+      DTS:CreationName=""
+      DTS:DTSID="{D4A29BCE-A89A-47B5-9A61-269BD5240AE1}"
+      DTS:From="Package\Execute SQL Task"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 11"
+      DTS:To="Package\Truncate local table" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 12]"
+      DTS:CreationName=""
+      DTS:DTSID="{C81BA239-5B83-4C0F-818D-362676C5350D}"
+      DTS:From="Package\Push into Warehouse 204"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 12"
+      DTS:To="Package\Update Acct Name in 204" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
       DTS:CreationName=""
@@ -4232,11 +4282,11 @@ LEFT JOIN MOBILE_MONEY_SWIFT_CODE_MAPPING M ON (B.SWIFT_CODE = M.FONEPAY_BANK_CO
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 6]"
       DTS:CreationName=""
-      DTS:DTSID="{0598C5E4-3D24-4907-B54F-9A41988CC693}"
+      DTS:DTSID="{51A9ED3F-A6A3-439F-A9F9-1D19074A268A}"
       DTS:From="Package\Pull CBS IBFT data"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 6"
-      DTS:To="Package\Truncate local table" />
+      DTS:To="Package\Execute SQL Task" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 7]"
       DTS:CreationName=""
@@ -4275,9 +4325,13 @@ LEFT JOIN MOBILE_MONEY_SWIFT_CODE_MAPPING M ON (B.SWIFT_CODE = M.FONEPAY_BANK_CO
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="170,42"
+          Id="Package\Execute SQL Task"
+          TopLeft="276,232" />
+        <NodeLayout
           Size="211,42"
           Id="Package\Insert into Local Table First"
-          TopLeft="522.833333333333,340.25" />
+          TopLeft="268.690476190476,421.964285714286" />
         <NodeLayout
           Size="174,42"
           Id="Package\Pull CBS IBFT data"
@@ -4289,11 +4343,11 @@ LEFT JOIN MOBILE_MONEY_SWIFT_CODE_MAPPING M ON (B.SWIFT_CODE = M.FONEPAY_BANK_CO
         <NodeLayout
           Size="269,42"
           Id="Package\Pull Swift Code &amp; Bank Name Mapping"
-          TopLeft="472,167" />
+          TopLeft="653.428571428571,174.142857142857" />
         <NodeLayout
           Size="205,42"
           Id="Package\Push into Warehouse 204"
-          TopLeft="789.083333333333,342.416666666667" />
+          TopLeft="553.654761904761,417.130952380952" />
         <NodeLayout
           Size="282,42"
           Id="Package\Run Stored Procedure in BankXP MySQL"
@@ -4303,9 +4357,9 @@ LEFT JOIN MOBILE_MONEY_SWIFT_CODE_MAPPING M ON (B.SWIFT_CODE = M.FONEPAY_BANK_CO
           Id="Package\Truncate CBS IBFT data"
           TopLeft="254,95" />
         <NodeLayout
-          Size="175,42"
+          Size="175,53"
           Id="Package\Truncate local table"
-          TopLeft="272.5,337.5" />
+          TopLeft="280.071428571429,321.928571428571" />
         <NodeLayout
           Size="227,42"
           Id="Package\Truncate Mobile Banking Data"
@@ -4372,18 +4426,40 @@ LEFT JOIN MOBILE_MONEY_SWIFT_CODE_MAPPING M ON (B.SWIFT_CODE = M.FONEPAY_BANK_CO
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 10]"
-          TopLeft="447.5,359.875">
+          TopLeft="370.880952380952,374.928571428571">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="75.333333333333,0"
+              EndConnector="0,47.0357142857141"
               Start="0,0"
-              End="67.833333333333,0">
+              End="0,39.5357142857141">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="67.833333333333,0" />
+                    End="0,39.5357142857141" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 11]"
+          TopLeft="364.285714285715,274">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,47.9285714285714"
+              Start="0,0"
+              End="0,40.4285714285714">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,40.4285714285714" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4428,30 +4504,18 @@ LEFT JOIN MOBILE_MONEY_SWIFT_CODE_MAPPING M ON (B.SWIFT_CODE = M.FONEPAY_BANK_CO
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="788,128">
+          TopLeft="787.964285714286,128">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-181.5,39"
+              EndConnector="0,46.1428571428572"
               Start="0,0"
-              End="-181.5,31.5">
+              End="0,38.6428571428572">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,15.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,15.5"
-                    Point2="0,19.5"
-                    Point3="-4,19.5" />
-                  <mssgle:LineSegment
-                    End="-177.5,19.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-177.5,19.5"
-                    Point2="-181.5,19.5"
-                    Point3="-181.5,23.5" />
-                  <mssgle:LineSegment
-                    End="-181.5,31.5" />
+                    End="0,38.6428571428572" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4462,18 +4526,18 @@ LEFT JOIN MOBILE_MONEY_SWIFT_CODE_MAPPING M ON (B.SWIFT_CODE = M.FONEPAY_BANK_CO
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 4]"
-          TopLeft="733.833333333333,362.333333333333">
+          TopLeft="479.690476190476,440.547619047619">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="55.25,0"
+              EndConnector="73.9642857142853,0"
               Start="0,0"
-              End="47.75,0">
+              End="66.4642857142853,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="47.75,0" />
+                    End="66.4642857142853,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4488,26 +4552,26 @@ LEFT JOIN MOBILE_MONEY_SWIFT_CODE_MAPPING M ON (B.SWIFT_CODE = M.FONEPAY_BANK_CO
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="201.75,131"
+              EndConnector="209.321428571429,115.428571428571"
               Start="0,0"
-              End="201.75,123.5">
+              End="209.321428571429,107.928571428571">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,82.0225140712946" />
+                    End="0,71.797373358349" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,82.0225140712946"
-                    Point2="0,86.0225140712946"
-                    Point3="4,86.0225140712946" />
+                    Point1="0,71.797373358349"
+                    Point2="0,75.797373358349"
+                    Point3="4,75.797373358349" />
                   <mssgle:LineSegment
-                    End="197.75,86.0225140712946" />
+                    End="205.321428571429,75.797373358349" />
                   <mssgle:CubicBezierSegment
-                    Point1="197.75,86.0225140712946"
-                    Point2="201.75,86.0225140712946"
-                    Point3="201.75,90.0225140712946" />
+                    Point1="205.321428571429,75.797373358349"
+                    Point2="209.321428571429,75.797373358349"
+                    Point3="209.321428571429,79.797373358349" />
                   <mssgle:LineSegment
-                    End="201.75,123.5" />
+                    End="209.321428571429,107.928571428571" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4518,18 +4582,18 @@ LEFT JOIN MOBILE_MONEY_SWIFT_CODE_MAPPING M ON (B.SWIFT_CODE = M.FONEPAY_BANK_CO
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 6]"
-          TopLeft="360.5,208">
+          TopLeft="361,208">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,129.5"
+              EndConnector="0,24"
               Start="0,0"
-              End="0,122">
+              End="0,16.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,122" />
+                    End="0,16.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4540,30 +4604,30 @@ LEFT JOIN MOBILE_MONEY_SWIFT_CODE_MAPPING M ON (B.SWIFT_CODE = M.FONEPAY_BANK_CO
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 7]"
-          TopLeft="606.5,209">
+          TopLeft="787.928571428571,216.142857142857">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-204.75,128.5"
+              EndConnector="-378.607142857142,105.785714285714"
               Start="0,0"
-              End="-204.75,121">
+              End="-378.607142857142,98.2857142857144">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,80.3808630393996" />
+                    End="0,65.4652908067543" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,80.3808630393996"
-                    Point2="0,84.3808630393996"
-                    Point3="-4,84.3808630393996" />
+                    Point1="0,65.4652908067543"
+                    Point2="0,69.4652908067543"
+                    Point3="-4,69.4652908067543" />
                   <mssgle:LineSegment
-                    End="-200.75,84.3808630393996" />
+                    End="-374.607142857142,69.4652908067543" />
                   <mssgle:CubicBezierSegment
-                    Point1="-200.75,84.3808630393996"
-                    Point2="-204.75,84.3808630393996"
-                    Point3="-204.75,88.3808630393996" />
+                    Point1="-374.607142857142,69.4652908067543"
+                    Point2="-378.607142857142,69.4652908067543"
+                    Point3="-378.607142857142,73.4652908067543" />
                   <mssgle:LineSegment
-                    End="-204.75,121" />
+                    End="-378.607142857142,98.2857142857144" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4628,6 +4692,32 @@ LEFT JOIN MOBILE_MONEY_SWIFT_CODE_MAPPING M ON (B.SWIFT_CODE = M.FONEPAY_BANK_CO
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="204,42"
+          Id="Package\Update Acct Name in 204"
+          TopLeft="845.714285714286,418.571428571429" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 12]"
+          TopLeft="758.654761904761,438.85119047619">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="87.0595238095244,0"
+              Start="0,0"
+              End="79.5595238095244,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="79.5595238095244,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -4639,25 +4729,25 @@ LEFT JOIN MOBILE_MONEY_SWIFT_CODE_MAPPING M ON (B.SWIFT_CODE = M.FONEPAY_BANK_CO
         <NodeLayout
           Size="157,42"
           Id="Package\Pull CBS IBFT data\OLE DB Source"
-          TopLeft="341,43" />
+          TopLeft="329,19" />
         <NodeLayout
           Size="177,42"
           Id="Package\Pull CBS IBFT data\OLE DB Destination"
-          TopLeft="329,141" />
+          TopLeft="315,105" />
         <EdgeLayout
           Id="Package\Pull CBS IBFT data.Paths[OLE DB Source Output]"
-          TopLeft="418.5,85">
+          TopLeft="405.5,61">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,56"
+              EndConnector="0,44"
               Start="0,0"
-              End="0,48.5">
+              End="0,36.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,48.5" />
+                    End="0,36.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4868,6 +4958,28 @@ LEFT JOIN MOBILE_MONEY_SWIFT_CODE_MAPPING M ON (B.SWIFT_CODE = M.FONEPAY_BANK_CO
           Id="Package\Push into Warehouse 204\OLE DB Destination"
           TopLeft="370,220" />
         <EdgeLayout
+          Id="Package\Push into Warehouse 204.Paths[OLE DB Source Output]"
+          TopLeft="456.25,55">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,29"
+              Start="0,0"
+              End="0,21.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\Push into Warehouse 204.Paths[Derived Column Output]"
           TopLeft="456.25,126">
           <EdgeLayout.Curve>
@@ -4903,28 +5015,6 @@ LEFT JOIN MOBILE_MONEY_SWIFT_CODE_MAPPING M ON (B.SWIFT_CODE = M.FONEPAY_BANK_CO
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,17.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Push into Warehouse 204.Paths[OLE DB Source Output]"
-          TopLeft="456.25,55">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,29"
-              Start="0,0"
-              End="0,21.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,21.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

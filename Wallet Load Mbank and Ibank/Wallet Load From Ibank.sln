@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33920.266
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "Wallet Load  Ibank", "Wallet Load  Ibank.dtproj", "{B1C95E9D-BAC7-4393-949C-774F5C6E93D6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B1C95E9D-BAC7-4393-949C-774F5C6E93D6}.Development|Default.ActiveCfg = Development
+		{B1C95E9D-BAC7-4393-949C-774F5C6E93D6}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F7A046A5-A9C3-4754-8E6A-9E6CC5C31709}
+	EndGlobalSection
+EndGlobal
